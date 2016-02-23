@@ -1,7 +1,17 @@
 
 jQuery.extend({
 	
+	handleError: function( s, xhr, status, e ) 		{
+	// If a local callback was specified, fire it
+		if ( s.error ) {
+			s.error.call( s.context || s, xhr, status, e );
+		}
 
+		// Fire the global callback
+		if ( s.global ) {
+			(s.context ? jQuery(s.context) : jQuery.event).trigger( "ajaxError", [xhr, s, e] );
+		}
+	},
     createUploadIframe: function(id, uri)
 	{
 			//create frame
@@ -23,27 +33,17 @@ jQuery.extend({
 
             return jQuery('#' + frameId).get(0);			
     },
-    createUploadForm: function(id, fileElementId, data)
+    createUploadForm: function(id, fileElementId)
 	{
 		//create form	
 		var formId = 'jUploadForm' + id;
 		var fileId = 'jUploadFile' + id;
 		var form = jQuery('<form  action="" method="POST" name="' + formId + '" id="' + formId + '" enctype="multipart/form-data"></form>');	
-		if(data)
-		{
-			for(var i in data)
-			{
-				jQuery('<input type="hidden" name="' + i + '" value="' + data[i] + '" />').appendTo(form);
-			}			
-		}		
 		var oldElement = jQuery('#' + fileElementId);
 		var newElement = jQuery(oldElement).clone();
 		jQuery(oldElement).attr('id', fileId);
 		jQuery(oldElement).before(newElement);
 		jQuery(oldElement).appendTo(form);
-
-
-		
 		//set attributes
 		jQuery(form).css('position', 'absolute');
 		jQuery(form).css('top', '-1200px');
@@ -56,7 +56,7 @@ jQuery.extend({
         // TODO introduce global settings, allowing the client to modify them for all requests, not only timeout		
         s = jQuery.extend({}, jQuery.ajaxSettings, s);
         var id = new Date().getTime()        
-		var form = jQuery.createUploadForm(id, s.fileElementId, (typeof(s.data)=='undefined'?false:s.data));
+		var form = jQuery.createUploadForm(id, s.fileElementId);
 		var io = jQuery.createUploadIframe(id, s.secureuri);
 		var frameId = 'jUploadFrame' + id;
 		var formId = 'jUploadForm' + id;		

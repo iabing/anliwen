@@ -8,7 +8,7 @@
 
  $(function(){
  	//初始化基本资料页面
- 	$('.mContainer').load('page/myInfos/dljl.html');
+ 	$('.mContainer').load('page/myInfos/wdtx.html');
  	//个人中心 导航切换
  	$('.navUl li>a').mouseenter(function(){
  		$('.navUl li>a').removeAttr('id');
@@ -16,8 +16,6 @@
  		$('.subNav').hide();
  		$(this).siblings('.subNav').show();
  	});
-
- 	
  });
 
  //检验手机号码
