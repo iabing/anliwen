@@ -1,0 +1,55 @@
+<link rel="stylesheet" href="css/common.css" type="text/css" />
+<link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
+<script type="text/javascript" src="js/jquery.Jcrop.js"></script>
+<style type="text/css">
+	.crop_preview{position:absolute; left:520px; top:0; width:120px; height:120px; overflow:hidden;}
+</style>
+<div class="wrapBox">
+	<h2 class="infoH2">我的头像</h2>
+	<div class="infoBox">
+		<div class="zxx_out_box">
+		    <div class="zxx_in_box">
+		        <div class="zxx_header">
+		            <a href="http://www.zhangxinxu.com/">
+		                <img class="l" src="http://www.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif" />
+		            </a>
+		            <span class="zxx_author_time">by zhangxinxu 2009-11-12 14:31</span>
+		        </div> 
+		        <h1 class="zxx_title">Jcrop照片剪裁插件高宽比例固定/剪裁效果预览演示</h1>
+		        <div class="zxx_main_con">
+		        	<div class="zxx_test_list">
+		                <div class="rel mb20">
+		                	<img id="xuwanting" src="images/xuwanting.jpg" />
+		                    <span id="preview_box" class="crop_preview"><img id="crop_preview" src="images/xuwanting.jpg" /></span>
+		                </div>
+		            </div>
+		        </div>
+		    </div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//记得放在jQuery(window).load(...)内调用，否则Jcrop无法正确初始化
+		$("#xuwanting").Jcrop({
+			onChange:showPreview,
+			onSelect:showPreview,
+			aspectRatio:1
+		});	
+		//简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
+		function showPreview(coords){
+			if(parseInt(coords.w) > 0){
+				//计算预览区域图片缩放的比例，通过计算显示区域的宽度(与高度)与剪裁的宽度(与高度)之比得到
+				var rx = $("#preview_box").width() / coords.w; 
+				var ry = $("#preview_box").height() / coords.h;
+				//通过比例值控制图片的样式与显示
+				$("#crop_preview").css({
+					width:Math.round(rx * $("#xuwanting").width()) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
+					height:Math.round(rx * $("#xuwanting").height()) + "px",	//预览图片高度为计算比例值与原图片高度的乘积
+					marginLeft:"-" + Math.round(rx * coords.x) + "px",
+					marginTop:"-" + Math.round(ry * coords.y) + "px"
+				});
+			}
+		}
+	});
+</script>

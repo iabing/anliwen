@@ -1,0 +1,109 @@
+<div class="wrapBox">
+	<h2 class="infoH2">修改密码</h2>
+	<div class="infoBox">
+		<div class="infoTips">
+			<h3>修改密码</h3>
+			<p class="infoTipsP1">建议使用字母、数字与标点的组合，可以大幅提升帐号安全</p>
+			<p class="infoTipsP2"><a href="javascript:void(0)">修改密码</a></p>
+			<div class="infoTipsB">
+				<p><strong>无法通过密保验证？</strong></p><p class="add10"></p>
+				<p class="mt5">您可以进行<a href="" class="infoTipsa">帐号申诉</a>，客服再核实您的身份后可为您重置密码</p>
+			</div>
+		</div>
+		<div class="infoDiv" style="display: none">
+			<p class="modifytop"><strong>修改登录密码</strong></p>
+			<div class="modify-s1">
+				<p class="modify-p1"></p>
+				<form method="post" action="mpwds1.php">
+					<table class="modify-table">
+						<tr>
+							<th>已验证手机：</th>
+							<td colspan="2"><strong>187*****355</strong><span>通过支付密码验证</span></td>
+						</tr>
+						<tr class="addh5"></tr>
+						<tr>
+							<th width="33%">请填写手机校验码：</th>
+							<td><input type="text" name="phonecode" required="required"/></td>
+							<td><span id="getCodeBtn">获取短信校验码</span></td>
+						</tr>
+						<tr>
+							<th>验证码：</th>
+							<td><input type="text" name="ecode" required="required"/></td>
+							<td><img src="images/get_img.jpg" alt=""/><span>看不清？ <a href="">换一张</a></span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input type="submit" value="提 交"></td>
+						</tr>
+					</table>
+				</form>
+				<p class="addh20"></p>
+			</div>
+			<div class="modify-s2" style="display:none">
+				<p class="modify-p2"></p>
+				<form method="post" action="mpwds2.php">
+					<table class="modify-table">
+						<tr>
+							<th width="33%">新的登录密码：</th>
+							<td><input type="password" name="pwd" required="required"/></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th width="33%">确认新密码：</th>
+							<td><input type="password" name="pwd" required="required"/></td>
+							<td></td>
+						</tr>
+						<tr>
+							<th>验证码：</th>
+							<td><input type="text" name="mcode" required="required"/></td>
+							<td><img src="images/get_img.jpg" alt=""/><span>看不清？ <a href="">换一张</a></span></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td colspan="2"><input type="submit" value="提 交"></td>
+						</tr>
+					</table>
+				</form>
+				<p class="addh20"></p>
+			</div>
+			<div class="modify-s3" style="display:none">
+				<p class="modify-p3"></p>
+				<h1 class="modify3H1">密码修改完成！</h1>
+				<p class="modify3p2"><a href="">确认</a></p>
+				<p class="addh20"></p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	
+	$(function(){
+		//
+		$('.infoTipsP2 a').click(function(){
+			$('.infoTips').hide();
+			$('.infoDiv').show();
+		});
+		//短信验证码倒计时
+		var abvar = {};
+		abvar.duanxintime = 90;
+		abvar.settimeer = null;
+
+		$('#getCodeBtn').click(function(){
+			abvar.settimeer = setInterval(daoTime,1000);
+		});
+		function daoTime(){
+			var str;
+			abvar.duanxintime--;
+			if(abvar.duanxintime > 0){
+				str = abvar.duanxintime + 's后重新发送';
+				$('#getCodeBtn').attr('disabled','disabled');
+			}else{
+				str = '获取短信校验码';
+				abvar.duanxintime = 10;
+				$('#getCodeBtn').removeAttr('disabled');
+				clearInterval(abvar.settimeer);
+			}
+			$('#getCodeBtn').html(str);
+		}
+	});
+</script>
