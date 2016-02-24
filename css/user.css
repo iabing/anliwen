@@ -59,7 +59,7 @@ header a i {font-size:16px;font-style: normal;}
 .subNav {display:none;}
 #curNav {color:#3B92FB;background: #EEF4FA;}
 .curSubNav,.curSubNav:link,.curSubNav:visited,.curSubNav:hover,.curSubNav:active {color:#3B92FB;}
-.mContainer {margin-top: 80px;}
+.mContainer {margin-top: 60px;}
 
 footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .fLeft {width: 230px;height: 42px;margin-top: 9px;background: url(../images/flogo.png) no-repeat; float: left;}
@@ -69,7 +69,7 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .fRight p a:hover {color:#fff; text-decoration: underline;}
 /* jbzl.html 基本资料 */
 .wrapBox {}
-.infoH2 {font-size: 16px;color:#666;text-align: center;margin-bottom: 25px;}
+.infoH2 {font-size: 18px;color:#666;text-align: center;margin: 25px; padding-top: 20px;}
 .infoBox {width: 878px;padding:0 20px;border:1px solid #3B92FB; border-radius:3px;}
 .infoForm label {display: block;margin:20px 0; font-size: 16px;color:#666;}
 .infoForm label input[type='text'] {width: 320px;height: 25px;line-height: 25px;padding:0 6px;font-size: 14px;color:#666; border:1px solid #ccc;}
@@ -159,6 +159,69 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .infoDemoa,.infoDemoa:link,.infoDemoa:visited,.infoDemoa:active {margin:0 3px; color:#3B92FB;}
 .infoDemoa:hover {text-decoration: underline;}
 
+/* wlzm.html 我的订单-往来账目 */
+.zmP {height: 35px;line-height: 35px;background: #3B92FB;padding:0 20px; color:#fff;font-size: 14px;}
+.zmP b {color:#FD4444; margin-left: 10px;}
+.zmP a {float: right;font-weight: bold;}
+.zmP a:link,.zmP a:visited,.zmP a:active {color:#fff;}
+.zmP a:hover {text-decoration: underline;}
+.zmTable {width: 100%;}
+.zmTable tr th,.zmTable tr td {padding:8px; border:1px solid #CED7DF; text-align: center;}
+.zmTable tr td:nth-child(3) {text-align:left;padding:8px 10px;}
+
+/* fwht.html 我的订单-服务合同 */
+.orderNav {width: 940px; margin-left:-10px;}
+.orderNav ul li {width: 168px;height: 115px; margin:10px; float: left;border-radius: 5px; }
+.orderNav ul li:hover {opacity:.8; filter:alpha(opacity=80);}
+.orderNav ul li a {display: block; width: 100%;height: 100%; text-align: center;color:#fff; line-height: 180px;font-size: 18px;}
+.orderNav ul li:nth-child(1) {background: #5496C0;}
+.orderNav ul li:nth-child(2) {background: #38B5D2;}
+.orderNav ul li:nth-child(3) {background: #F2AE43;}
+.orderNav ul li:nth-child(4) {background: #DC6F87;}
+.orderNav ul li:nth-child(5) {background: #B379D4;}
+.orderNav ul li:nth-child(6) {background: #DC6F87;}
+.orderNav ul li:nth-child(7) {background: #D7BF7C;}
+.orderNav ul li:nth-child(8) {background: #51C291;}
+.orderNav ul li:nth-child(9) {background: #28A9E3;}
+.orderNav ul li:nth-child(10)  {background: #E18855;}
+.orderNav ul li:nth-child(1) a {background: url(../images/uicon01.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(2) a {background: url(../images/uicon02.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(3) a {background: url(../images/uicon03.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(4) a {background: url(../images/uicon04.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(5) a {background: url(../images/uicon05.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(6) a {background: url(../images/uicon06.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(7) a {background: url(../images/uicon07.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(8) a {background: url(../images/uicon08.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(9) a {background: url(../images/uicon09.png) no-repeat center 13px;}
+.orderNav ul li:nth-child(10) a {background: url(../images/uicon10.png) no-repeat center 13px;}
+.orderBox {width: 918px;border:1px solid #379BFF;}
+.orderBoxP {border-bottom: 1px solid #379BFF; height: 35px;line-height: 35px;}
+.orderBoxP span {display: inline-block; padding:0 20px; height: 35px;line-height: 30px;border-right:1px solid #379BFF;font-size: 14px;cursor: pointer; color:#666;}
+#curOrderSP {background: #379BFF; color:#fff;}
+.orderBoxP span b {font-size: 22px;margin:0 5px; font-weight: bold; position: relative; top:2px;}
+.orderCon {padding:30px;}
+.orderConDemo {}
+.orderConDemo p {line-height: 2; font-size: 14px;}
+.oConDP1 {width: 194px;height: 35px;background: url(../images/uimg03.png) no-repeat;}
+.oConDH1 {font-size: 20px; font-weight: bold;text-align: center;margin:0 0 15px 0;}
+
+.pjTable {width: 100%;}
+.pjTable tr th,.pjTable tr td {padding:6px 10px; text-align: center; border:1px solid #379BFF;}
+.pjTable tr th {font-size: 14px; padding:0px 0 2px 0; background: #EEF4FA;}
+.pjTable tr th b {font-size: 22px;margin:0 5px; font-weight: bold; position: relative; top:2px;}
+.pjTable tr td div {height: 42px;line-height: 42px;}
+.pjTable tr td:nth-child(2) div select,.pjTable tr td:nth-child(5) div select {width: 180px;height: 30px;border:1px solid #E0E0E0;border-radius:3px;}
+.pjTable tr td:nth-child(3) div select,.pjTable tr td:nth-child(6) div select {width: 130px;height: 30px;border:1px solid #E0E0E0;border-radius:3px;}
+.pjTable tr td textarea {border:1px solid #E0E0E0;width: 320px; height: 100px; padding:5px; line-height: 1.5;}
+.pjTable tr td span {width: 75px;text-align: center; display: inline-block;vertical-align: top;margin-top: 7px;}
+.pjTable tr td input[type='submit'] {display:inline-block;width: 80px;cursor:pointer;height: 30px;line-height: 30px;border:1px solid #ccc;background: #F5F5F5;font-size: 14px;text-align: center;margin:10px 0;}
+.pjTable tr td input[type='submit']:hover {background: #E8E8E8;}
+
+/* gybwl.html 我的订单-雇佣备忘录 */
+.orderBoxP2 {padding:0 20px; height: 45px;line-height: 45px;}
+.orderBoxP2 a {display:inline-block; float: left; background: url(../images/uicon12.png) no-repeat 0 2px; text-indent: 1.2em; font-size: 14px;}
+.orderBoxP2 input {float: right; width: 105px; height: 20px; line-height: 20px; padding:0 5px;font-size: 12px;color:#666;}
+
 
 
 
@@ -177,10 +240,12 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
  .myInput { outline: none; border-radius:5px; vertical-align:middle; padding: 3px 8px;width:250px; height:26px; border:1px solid; border-color:#CCC #DDD #DDD #CCC; box-shadow:2px 2px 1px 0 #E7E7E7 inset; -webkit-box-shadow:2px 2px 1px 0 #E7E7E7 inset; -moz-box-shadow:2px 2px 1px 0 #E7E7E7 inset; }
  .w1200 {width: 1200px; margin:0 auto;}
  .tac {text-align: center;}
+ .tar {text-align: right;}
  .fs14 {font-size: 14px;}
  .addh5 {height: 5px;}
  .addh10 {height: 10px;}
  .addh20 {height: 20px;}
+ .addh200 {height: 200px;}
  /* margin 分离 */
  .m10{ margin:10px }
  .m15{ margin:15px }
@@ -214,3 +279,4 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
  .mr30{ margin-right:30px }
  .mr50{ margin-right:50px }
  .mr100{ margin-right:100px }
+ .pt0 {padding-top:0;}

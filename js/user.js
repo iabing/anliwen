@@ -8,7 +8,7 @@
 
  $(function(){
  	//初始化基本资料页面
- 	$('.mContainer').load('page/myInfos/wdtx.html');
+ 	$('.mContainer').load('page/myOrder/gybwl.html');
  	//个人中心 导航切换
  	$('.navUl li>a').mouseenter(function(){
  		$('.navUl li>a').removeAttr('id');

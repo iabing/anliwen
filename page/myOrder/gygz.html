@@ -1,0 +1,54 @@
+<div class="wrapBox">
+	<div class="orderNav"></div>
+	<h2 class="infoH2 pt0">雇佣规章</h2>
+	<div class="orderBox">
+		<p class="orderBoxP"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨</span><span>订单二<b>·</b>00189　|　王群伟阿姨</span></p>
+		<div class="orderCon">
+			<div class="orderConDemo">
+				<p class="oConDP1"></p>
+				<p class="tar">服务标准编号：G012145</p>
+				<h1 class="oConDH1">雇佣规章</h1>
+				<p>甲方：（客户）</p>
+				<p>乙方：苏州安丽文家政服务有限公司</p>
+				<p>丙方：（服务人员）</p>
+				<div>（合同正文）</div>
+				<p class="addh200"></p>
+				<p>甲方签名：</p>
+				<p>服务地址：</p>
+				<p>乙方签名：</p>
+				<p>公司地址：</p>
+				<p>丙方签名：</p>
+				<p>居住地址：</p>
+				<p class="tar">签约日期 2015年10月25日</p>
+			</div>
+			<div class="orderConDemo" style="display:none">
+				<p class="oConDP1"></p>
+				<p class="tar">服务标准编号：G012145</p>
+				<h1 class="oConDH1">雇佣规章222</h1>
+				<p>甲方：（客户）</p>
+				<p>乙方：苏州安丽文家政服务有限公司</p>
+				<p>丙方：（服务人员）</p>
+				<div>（合同正文）</div>
+				<p class="addh200"></p>
+				<p>甲方签名：</p>
+				<p>服务地址：</p>
+				<p>乙方签名：</p>
+				<p>公司地址：</p>
+				<p>丙方签名：</p>
+				<p>居住地址：</p>
+				<p class="tar">签约日期 2015年10月25日</p>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(function(){
+		$('.orderNav').load('public/orderNav.html');
+		$('.orderBoxP span').click(function(){
+			$(this).siblings().removeAttr('id');
+			$(this).attr('id','curOrderSP');
+			$('div.orderConDemo').hide();
+			$('div.orderConDemo').eq($(this).index()).show();
+		});
+	});
+</script>
