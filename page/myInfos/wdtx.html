@@ -1,55 +1,240 @@
-<link rel="stylesheet" href="css/common.css" type="text/css" />
 <link rel="stylesheet" href="css/jquery.Jcrop.css" type="text/css" />
-<script type="text/javascript" src="js/jquery.Jcrop.js"></script>
-<style type="text/css">
-	.crop_preview{position:absolute; left:520px; top:0; width:120px; height:120px; overflow:hidden;}
-</style>
 <div class="wrapBox">
 	<h2 class="infoH2">我的头像</h2>
-	<div class="infoBox">
-		<div class="zxx_out_box">
-		    <div class="zxx_in_box">
-		        <div class="zxx_header">
-		            <a href="http://www.zhangxinxu.com/">
-		                <img class="l" src="http://www.zhangxinxu.com/wordpress/wp-content/themes/default/images/index_logo.gif" />
-		            </a>
-		            <span class="zxx_author_time">by zhangxinxu 2009-11-12 14:31</span>
-		        </div> 
-		        <h1 class="zxx_title">Jcrop照片剪裁插件高宽比例固定/剪裁效果预览演示</h1>
-		        <div class="zxx_main_con">
-		        	<div class="zxx_test_list">
-		                <div class="rel mb20">
-		                	<img id="xuwanting" src="images/xuwanting.jpg" />
-		                    <span id="preview_box" class="crop_preview"><img id="crop_preview" src="images/xuwanting.jpg" /></span>
-		                </div>
-		            </div>
-		        </div>
+	<div class="infoBox" style="padding:20px">
+		<!-- 头像层 -->
+		<div class="userPhotoBox">
+		  <p class="userPhotoP"><span class="localSpan curPhotoSpan">本地上传</span><span class="systemSpan">系统头像</span></p>
+		  <div class="localDiv">
+		    <form id='myuploadForm' method='post' enctype='multipart/form-data'>
+		      <p class="photoFileInputP"><span class="photoFileSpan"><input id="file1" type="file" name="file1" class="photoFileInput" /></span><br/><span style="position: relative;top:10px">只支付JPG、PNG、GIF，大小不超过2M</span></p>
+		      <p id="" style="display:none"></p>
+		    </form>
+		    <div id="showdivjian" style="display:none"></div>
+	    	<div style="display:none;overflow:hidden" id="div_avatar">
+	    		<div id="picture_original"><img alt="" src="" /></div>
+	    		<div class="clearfix">
+	    			<div id="picture_200"></div>
+	    			<div id="picture_50"></div>
+	    			<div id="picture_30"></div>
+	    		</div>
+	    		<input type="hidden" id="x1" name="x1" value="0" />
+	            <input type="hidden" id="y1" name="y1" value="0" />
+	            <input type="hidden" id="cw" name="cw" value="0" />
+	            <input type="hidden" id="ch" name="ch" value="0" />
+	    		<input type="hidden" id="imgsrc" name="imgsrc" />
+	    		<input type="button" value="裁剪上传" id="btnCrop"/>
+	    	</div>
+		  </div>
+		  <div class="systemDiv" style="display:none">
+		    <p class="systemP"><span class="curSystemSpan">古风</span><span>卡通</span><span>美女</span><span>人物</span></p>
+		    <div class="systemCase clearfix">
+		      <img src="images/frt/frt1.png" />
+		      <img src="images/frt/frt2.png" />
+		      <img src="images/frt/frt3.png" />
+		      <img src="images/frt/frt4.png" />
+		      <img src="images/frt/frt5.png" />
+		      <img src="images/frt/frt6.png" />
+		      <img src="images/frt/frt7.png" />
+		      <img src="images/frt/frt8.png" />
+		      <img src="images/frt/frt9.png" />
+		      <img src="images/frt/frt10.png" />
+		      <img src="images/frt/frt11.png" />
+		      <img src="images/frt/frt12.png" />
+		      <img src="images/frt/frt13.png" />
+		      <img src="images/frt/frt14.png" />
+		      <img src="images/frt/frt15.png" />
 		    </div>
+		    <div class="systemCase clearfix" style="display:none">
+		      <img src="images/katong/katong1.jpg" />
+		      <img src="images/katong/katong2.jpg" />
+		      <img src="images/katong/katong3.jpg" />
+		      <img src="images/katong/katong4.jpg" />
+		      <img src="images/katong/katong5.jpg" />
+		      <img src="images/katong/katong6.jpg" />
+		      <img src="images/katong/katong7.jpg" />
+		      <img src="images/katong/katong8.jpg" />
+		      <img src="images/katong/katong9.jpg" />
+		      <img src="images/katong/katong10.jpg" />
+		      <img src="images/katong/katong11.jpg" />
+		      <img src="images/katong/katong12.jpg" />
+		      <img src="images/katong/katong13.jpg" />
+		      <img src="images/katong/katong14.jpg" />
+		      <img src="images/katong/katong15.jpg" />
+		    </div>
+		    <div class="systemCase clearfix" style="display:none">
+		      <img src="images/mv/mv1.jpg" />
+		      <img src="images/mv/mv2.jpg" />
+		      <img src="images/mv/mv3.jpg" />
+		      <img src="images/mv/mv4.jpg" />
+		      <img src="images/mv/mv5.jpg" />
+		      <img src="images/mv/mv6.jpg" />
+		      <img src="images/mv/mv7.jpg" />
+		      <img src="images/mv/mv8.jpg" />
+		      <img src="images/mv/mv9.jpg" />
+		      <img src="images/mv/mv10.jpg" />
+		      <img src="images/mv/mv11.jpg" />
+		      <img src="images/mv/mv12.jpg" />
+		      <img src="images/mv/mv13.jpg" />
+		      <img src="images/mv/mv14.jpg" />
+		      <img src="images/mv/mv15.jpg" />
+		    </div>
+		    <div class="systemCase clearfix" style="display:none">
+		      <img src="images/rw/rw1.jpg" />
+		      <img src="images/rw/rw2.jpg" />
+		      <img src="images/rw/rw3.jpg" />
+		      <img src="images/rw/rw4.jpg" />
+		      <img src="images/rw/rw5.jpg" />
+		      <img src="images/rw/rw6.jpg" />
+		      <img src="images/rw/rw7.jpg" />
+		      <img src="images/rw/rw8.jpg" />
+		      <img src="images/rw/rw9.jpg" />
+		      <img src="images/rw/rw10.jpg" />
+		      <img src="images/rw/rw11.jpg" />
+		      <img src="images/rw/rw12.jpg" />
+		      <img src="images/rw/rw13.jpg" />
+		      <img src="images/rw/rw14.jpg" />
+		      <img src="images/rw/rw15.jpg" />
+		    </div>
+		    <p class="systemSaveP"><span class="systemSave">保存</span><span class="systemCancle">取消</span></p>
+		  </div>
 		</div>
 	</div>
 </div>
+<script src="js/jquery.ajaxfileupload.js" type="text/javascript"></script>
+<script src="js/jquery.jcrop.js" type="text/javascript"></script>
+<script src="js/avatarCutter.js" type="text/javascript"></script>
 <script type="text/javascript">
-	$(document).ready(function(){
-		//记得放在jQuery(window).load(...)内调用，否则Jcrop无法正确初始化
-		$("#xuwanting").Jcrop({
-			onChange:showPreview,
-			onSelect:showPreview,
-			aspectRatio:1
-		});	
-		//简单的事件处理程序，响应自onChange,onSelect事件，按照上面的Jcrop调用
-		function showPreview(coords){
-			if(parseInt(coords.w) > 0){
-				//计算预览区域图片缩放的比例，通过计算显示区域的宽度(与高度)与剪裁的宽度(与高度)之比得到
-				var rx = $("#preview_box").width() / coords.w; 
-				var ry = $("#preview_box").height() / coords.h;
-				//通过比例值控制图片的样式与显示
-				$("#crop_preview").css({
-					width:Math.round(rx * $("#xuwanting").width()) + "px",	//预览图片宽度为计算比例值与原图片宽度的乘积
-					height:Math.round(rx * $("#xuwanting").height()) + "px",	//预览图片高度为计算比例值与原图片高度的乘积
-					marginLeft:"-" + Math.round(rx * coords.x) + "px",
-					marginTop:"-" + Math.round(ry * coords.y) + "px"
-				});
+    $(function () {
+		function getFileSize(fileName) {
+			var byteSize = 0;
+			//console.log($("#" + fileName).val());
+			if($("#" + fileName)[0].files) {
+				var byteSize  = $("#" + fileName)[0].files[0].size;
+			}else {
+				//var file = document.getElementById(fileName);
 			}
+			byteSize = Math.ceil(byteSize / 1024) //KB
+			return byteSize;//KB
 		}
-	});
+        $("#file1").change(function () {
+			ajaxFileUpload();
+        });
+		function ajaxFileUpload() {
+			$.ajaxFileUpload({
+                url: 'action.php', //用于文件上传的服务器端请求地址
+                secureuri: false, //一般设置为false
+                fileElementId: 'file1', //文件上传空间的id属性  <input type="file" id="file" name="file" />
+                dataType: 'json', //返回值类型 一般设置为json
+                success: function (data, status)  //服务器成功响应处理函数
+                {
+					//var json = eval('(' + data + ')');
+                    //alert(data);
+                    $("#picture_original>img").attr({src: data.src, width: data.width, height: data.height});
+					$('#imgsrc').val(data.path);
+					//alert(data.msg);
+
+					//同时启动裁剪操作，触发裁剪框显示，让用户选择图片区域
+					var cutter = new jQuery.UtrialAvatarCutter({
+							//主图片所在容器ID
+							content : "picture_original",
+							//缩略图配置,ID:所在容器ID;width,height:缩略图大小
+							purviews : [{id:"picture_200",width:100,height:100},{id:"picture_50",width:70,height:70},{id:"picture_30",width:30,height:30}],
+							//选择器默认大小
+							selector : {width:200,height:200},
+							showCoords : function(c) { //当裁剪框变动时，将左上角相对图片的X坐标与Y坐标 宽度以及高度
+								$("#x1").val(c.x);
+								$("#y1").val(c.y);
+								$("#cw").val(c.w);
+								$("#ch").val(c.h);
+							},
+							cropattrs : {boxWidth: 500, boxHeight: 500}
+						}
+					);
+                    cutter.reload(data.src);
+					//var purviews = [{id:"picture_200",width:200,height:200},{id:"picture_50",width:50,height:50},{id:"picture_30",width:30,height:30}];
+					//$("#img1").Jcrop({
+                    //    bgColor: 'black',
+                    //    bgOpacity: .4,
+                    //    setSelect: [100, 100, 150,150],  //设定4个角的初始位置
+                    //    aspectRatio: 1 / 1,
+                     //   onChange: showCoords,   //当裁剪框变动时执行的函数
+                     //   onSelect: showCoords,   //当选择完成时执行的函数
+					//	boxWidth: 500,
+					//	boxHeight: 500
+                    //});
+                    $('#myuploadForm').hide();
+					$('#div_avatar').show();
+                },
+                error: function (data, status, e)//服务器响应失败处理函数
+                {
+                    alert(e);
+                }
+			})
+			return false;
+		}
+
+		$('#btnCrop').click(function() {
+			$.getJSON('action2.php', {x: $('#x1').val(), y: $('#y1').val(), w: $('#cw').val(), h: $('#ch').val(), src: $('#imgsrc').val()}, function(data) {
+				if(data.msg){
+					$('#userphoto').attr('src',''+data.path);
+					alert('头像修改成功！');
+				}else{
+					alert('修改失败');
+				}
+			});
+			return false;
+		});
+
+		//头像上传box切换
+		$('span.localSpan').click(function(){
+		  $(this).addClass('curPhotoSpan');
+		  $('span.systemSpan').removeClass('curPhotoSpan');
+		  $('div.localDiv').show();
+		  $('div.systemDiv').hide();
+		});
+		$('span.systemSpan').click(function(){
+		  $(this).addClass('curPhotoSpan');
+		  $('span.localSpan').removeClass('curPhotoSpan');
+		  $('div.systemDiv').show();
+		  $('div.localDiv').hide();
+		});
+		//头像切换
+		$('div.systemCase img').each(function(){
+		  $(this).click(function(){
+		    $('#cursystemimg').removeAttr('id');
+		    $(this).attr('id','cursystemimg');
+		  });
+		});
+		//头像分类切换
+		$('p.systemP span').each(function(){
+		  $(this).click(function(){
+		    var index = $(this).index();
+		    $(this).siblings().removeClass('curSystemSpan');
+		    $(this).addClass('curSystemSpan');
+		    $('div.systemCase').hide();
+		    $('div.systemCase').eq(index).show();
+		  });
+		});
+
+		//提交系统头像
+		$('span.systemSave').click(function(){
+		    if($('#cursystemimg').length > 0){
+		        var src = $('#cursystemimg').attr('src');
+		        //database
+		        /*$.post('user.php?act=ajaxsystemp',{'src':src},function(data){
+		            if(data){
+		                $('#userphoto').attr('src',data.src);
+		                alert('保存成功！');
+		            }else{
+		                alert('保存失败！');
+		            }
+		        });*/
+		        $('#userphoto').attr('src',src);
+		        //location.reload();
+		    }else{
+		        alert('请先选择头像！');
+		    }
+		});
+    });
 </script>
