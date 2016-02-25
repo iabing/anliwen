@@ -8,8 +8,9 @@
 	<title>个人中心 - 安丽文服务</title>
 	<link rel="stylesheet" type="text/css" href="css/user.css">
 	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
-<body>
+<body ng-app="myApp">
 	<div class="utop">
 		<div class="w1200 clearfix">
 			<span></span>
@@ -24,66 +25,66 @@
 			<a href="index.html">安丽文首页&nbsp;&nbsp;<i>&raquo;</i></a>
 		</div>
 	</header>
-	<main class="w1200 clearfix">
+	<main class="w1200 clearfix" ng-controller="myCtrl">
 		<div class="mleft">
 			<div class="mltBox clearfix">
 				<div class="mlImg">
 					<img src="images/photo.png" id="userphoto">
-					<a href="">点击更换头像</a>
+					<a href="javascript:void(0)" ng-click="changePage('myInfos/wdtx.html')">点击更换头像</a>
 				</div>
 				<div class="mlName">
 					<h2>安安</h2>
-					<p><a href="">设置昵称</a></p>
-					<p><a href="">修改个人资料</a></p>
+					<p><a href="javascript:void(0)" ng-click="changePage('myInfos/jbzl.html')">设置昵称</a></p>
+					<p><a href="javascript:void(0)" ng-click="changePage('myInfos/jbzl.html')">修改个人资料</a></p>
 				</div>
 			</div>
 			<div class="mlbBox">
 				<p>上次登录时间：<small>2015年09月23日13:25</small></p>
-				<p><a href="">查看登录记录</a></p>
+				<p><a href="javascript:void(0)" ng-click="changePage('myInfos/dljl.html')">查看登录记录</a></p>
 			</div>
 		</div>
 		<div class="mright">
 			<nav>
 				<ul class="navUl clearfix">
-					<li><a href="">我的订单</a>
+					<li><a href="javascript:void(0)" ng-click="changePage('myOrder/fwjl.html')">我的订单</a>
 						<div class="subNav">
-							<a href="" class="curSubNav">新增订单</a>|
-							<a href="">订单安排</a>|
-							<a href="">服务记录</a>|
-							<a href="">往来账目</a>|
-							<a href="">订单历史</a>|
-							<a href="">服务相册</a>
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/xzdd.html')">新增订单</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/ddap.html')">订单安排</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/fwjl.html')">服务记录</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/wlzm.html')">往来账目</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/ddls.html')" class="curSubNav">订单历史</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myOrder/fwxc.html')">服务相册</a>
 						</div>
 					</li>
-					<li><a href="">我的评价</a>
+					<li><a href="javascript:void(0)" ng-click="changePage('myReview/wdpj.html')">我的评价</a>
 						<div class="subNav">
-							<a href="" class="curSubNav">我的评价</a>|
-							<a href="">服务调查</a>
+							<a href="javascript:void(0)" ng-click="changePage('myReview/wdpj.html')" class="curSubNav">我的评价</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myReview/fwdc.html')">服务调查</a>
 						</div>
 					</li>
-					<li><a href="">我的管家</a>
+					<li><a href="javascript:void(0)" ng-click="changePage('myHouse/gjzz.html')">我的管家</a>
 						<div class="subNav">
-							<a href="" class="curSubNav">管家职责</a>|
-							<a href="">服务有方</a>|
-							<a href="">管理纪实</a>|
-							<a href="">家事咨询</a>|
-							<a href="">投诉管理</a>
+							<a href="javascript:void(0)" ng-click="changePage('myHouse/gjzz.html')" class="curSubNav">管家职责</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myHouse/fwyf.html')">服务有方</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myHouse/gljs.html')">管理纪实</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myHouse/jszx.html')">家事咨询</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myHouse/tsgl.html')">投诉管理</a>
 						</div>
 					</li>
-					<li><a href="">百科问答</a></li>
-					<li><a href="">论坛互动</a></li>
-					<li><a href="">我的学堂</a></li>
-					<li><a href="" id="curNav">我的帐号</a>
+					<li><a href="javascript:void(0)" ng-click="changePage('baihe/baike.html')">百科问答</a></li>
+					<li><a href="javascript:void(0)" ng-click="changePage('forum/lthd.html')">论坛互动</a></li>
+					<li><a href="javascript:void(0)" ng-click="changePage('mySchool/wdxt.html')">我的学堂</a></li>
+					<li><a href="javascript:void(0)" ng-click="changePage('myInfos/jbzl.html')" id="curNav">我的帐号</a>
 						<div class="subNav" style="display:block;">
-							<a href="">修改密码</a>|
-							<a href="">登录记录</a>|
-							<a href="">我的头像</a>|
-							<a href="" class="curSubNav">基本资料</a>
+							<a href="javascript:void(0)" ng-click="changePage('myInfos/xgmm.html')">修改密码</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myInfos/dljl.html')">登录记录</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myInfos/wdtx.html')">我的头像</a>|
+							<a href="javascript:void(0)" ng-click="changePage('myInfos/jbzl.html')" class="curSubNav">基本资料</a>
 						</div>
 					</li>
 				</ul>
 			</nav>
-			<div class="mContainer"></div>
+			<div class="mContainer" ng-include="pageUrl"></div>
 		</div>
 	</main>
 	<footer>
@@ -105,6 +106,8 @@
 			</div>
 		</div>
 	</footer>
+	<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+	<script type="text/javascript" src="js/uapp.js"></script>
 	<script type="text/javascript" src="js/user.js"></script>
 </body>
 </html>

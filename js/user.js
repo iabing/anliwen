@@ -7,8 +7,6 @@
  */
 
  $(function(){
- 	//初始化基本资料页面
- 	$('.mContainer').load('page/myOrder/gybwl.html');
  	//个人中心 导航切换
  	$('.navUl li>a').mouseenter(function(){
  		$('.navUl li>a').removeAttr('id');
@@ -16,6 +14,11 @@
  		$('.subNav').hide();
  		$(this).siblings('.subNav').show();
  	});
+  //subNav
+  $('.subNav a').click(function(){
+    $(this).siblings().removeClass('curSubNav');
+    $(this).addClass('curSubNav');
+  });
  });
 
  //检验手机号码

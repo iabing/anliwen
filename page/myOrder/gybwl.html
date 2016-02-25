@@ -1,23 +1,100 @@
-<div class="wrapBox">
-	<div class="orderNav"></div>
+<div class="wrapBox" ng-controller="gybwlCtrl">
+	<div class="orderNav" ng-include="'public/orderNav.html'"></div>
 	<h2 class="infoH2 pt0">雇佣备忘录</h2>
-	<div class="orderBox">
+	<div class="orderBox" style="border-bottom:1px solid #fff;">
 		<p class="orderBoxP"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨</span><span>订单二<b>·</b>00189　|　王群伟阿姨</span></p>
-		<p class="orderBoxP2 clearfix"><a href="">添加备忘录</a><input type="text" onClick="WdatePicker({maxDate:'%y-%M-%d'})"/></p>
-		<div class="">
-			
+		<p class="orderBoxP2 clearfix"><a href="">添加备忘录</a><input type="text" onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate"/></p>
+		<div class="orderBoxCon">
+			<table class="orderBCTable">
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+			</table>
+		</div>
+		<div class="orderBoxCon" style="display:none">
+			<table class="orderBCTable">
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">gggggggg是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+				<tr>
+					<th class="tal colors1">2015-12-12 15:30</th>
+					<th><span class="colors1">来源：</span>通话记录</th>
+					<th><a href="">转入明日<i></i></a></th>
+					<th colspan="2" class="tac"><a href="" class="orderBCTa1">修改</a><a href="" class="orderBCTa2"></a></th>
+				</tr>
+				<tr>
+					<td colspan="3" width="75%">是根据登陆账号自动生成；状态模式在电脑上容易操作，在手机端上操作可能就不方便。以上雇佣备忘录仅仅是一种终端界面的样式，最终在程序设计时需要重新考虑制定更为合理、便捷、同时适应于手机端操作的系统。雇佣备忘录经常会是空白记录，那是没有需要”备忘</td>
+					<td class="orderBCTtd" width="12%"><p class="colors1">状态</p><p>等安排</p></td>
+					<td class="orderBCTtd" width="13%"><p class="colors1">记录人</p><p>安丽文管家</p></td>
+				</tr>
+				<tr><td colspan="5"></td></tr>
+			</table>
 		</div>
 	</div>
 </div>
-<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$('.orderNav').load('public/orderNav.html');
 		$('.orderBoxP span').click(function(){
 			$(this).siblings().removeAttr('id');
 			$(this).attr('id','curOrderSP');
-			$('div.orderConDemo').hide();
-			$('div.orderConDemo').eq($(this).index()).show();
+			$('div.orderBoxCon').hide();
+			$('div.orderBoxCon').eq($(this).index()).show();
 		});
+		//删除最后一个tr
+		$('.orderBCTable tr').last().remove();
 	});
 </script>
