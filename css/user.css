@@ -199,6 +199,7 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderBoxP span {display: inline-block; padding:0 20px; height: 35px;line-height: 30px;border-right:1px solid #379BFF;font-size: 14px;cursor: pointer; color:#666;}
 #curOrderSP {background: #379BFF; color:#fff;}
 .orderBoxP span b {font-size: 22px;margin:0 5px; font-weight: bold; position: relative; top:2px;}
+.orderBoxP span strong {font-size: 16px;margin:0 10px; font-weight: normal;}
 .orderCon {padding:30px;}
 .orderConDemo {}
 .orderConDemo p {line-height: 2; font-size: 14px;}
@@ -221,7 +222,6 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderBoxP2 {padding:0 15px; height: 45px;line-height: 45px;border-bottom: 1px solid #379BFF;}
 .orderBoxP2 a {display:inline-block; float: left; background: url(../images/uicon12.png) no-repeat 0 16px; text-indent: 1.3em; font-size: 14px;}
 .orderBoxP2 input {float: right; width: 105px; height: 20px; line-height: 20px; padding:0 5px;font-size: 12px;color:#666;border:1px solid #379BFF; margin-top: 12px;}
-
 .orderBoxCon {}
 .orderBCTable {width: 100%;}
 .orderBCTable tr th {background: #F5FAFD; padding:5px 15px;}
@@ -230,6 +230,12 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderBCTa1 {margin-left: 6px;}
 .orderBCTa2 {display: inline-block;width: 16px;height: 16px;background: url(../images/uicon14.png) no-repeat;float: right;}
 .orderBCTtd {text-align: center;border-left: 1px solid #379BFF;}
+
+/* gybwl.html 我的订单-雇佣备忘录 */
+.orderJlP {border-bottom: 1px solid #379BFF; height: 35px;line-height: 35px;background: #379BFF; color:#fff; text-align: center;font-size: 15px;}
+.orderJlCon {padding:10px 25px;}
+.orderJlCon p {line-height: 3;}
+.orderJlSpan {}
 
 
 
