@@ -6,19 +6,50 @@
  * @note   安丽文-版权所有
  */
 
+ //require.js配置文件
+ require.config({
+     paths: {
+         'jquery': 'jquery',
+         'WdatePicker': 'My97DatePicker/WdatePicker',
+         'easyui': 'easyui',
+         'fullcalendar': 'fullcalendar',
+         'layer': 'layer/layer',
+         'angular': 'http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js',
+         'angular-route': 'http://apps.bdimg.com/libs/angular-ui-router/0.2.15/angular-ui-router.js'
+     },
+     shim: {
+        "angular":{
+            exports:"angular"
+        },
+        "angular-route":{
+            exports:"angular-route"
+        }
+    }
+ })
+ require(['WdatePicker'], function(){  //加载WdatePicker
+
+ });
+
  $(function(){
- 	//个人中心 导航切换
- 	$('.navUl li>a').mouseenter(function(){
- 		$('.navUl li>a').removeAttr('id');
- 		$(this).attr('id','curNav');
- 		$('.subNav').hide();
- 		$(this).siblings('.subNav').show();
- 	});
+  //个人中心 导航切换
+  $('.navUl li>a').mouseenter(function(){
+    $('.navUl li>a').removeAttr('id');
+    $(this).attr('id','curNav');
+    $('.subNav').hide();
+    $(this).siblings('.subNav').show();
+  });
   //subNav
   $('.subNav a').click(function(){
     $(this).siblings().removeClass('curSubNav');
     $(this).addClass('curSubNav');
   });
+  //订单一、二切换
+  $('.orderBoxP span').click(function(){
+      $(this).siblings().removeAttr('id');
+      $(this).attr('id','curOrderSP');
+      $('div.orderBoxCon').hide();
+      $('div.orderBoxCon').eq($(this).index()).show();
+    });
  });
 
  //检验手机号码

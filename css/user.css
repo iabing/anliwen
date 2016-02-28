@@ -196,7 +196,7 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderNav ul li:nth-child(10) a {background: url(../images/uicon10.png) no-repeat center 13px;}
 .orderBox {width: 918px;border:1px solid #379BFF;}
 .orderBoxP {border-bottom: 1px solid #379BFF; height: 35px;line-height: 35px;}
-.orderBoxP span {display: inline-block; padding:0 20px; height: 35px;line-height: 30px;border-right:1px solid #379BFF;font-size: 14px;cursor: pointer; color:#666;}
+.orderBoxP span {display: inline-block; padding:0 20px; height: 35px;line-height: 35px;border-right:1px solid #379BFF;font-size: 14px;cursor: pointer; color:#666;}
 #curOrderSP {background: #379BFF; color:#fff;}
 .orderBoxP span b {font-size: 22px;margin:0 5px; font-weight: bold; position: relative; top:2px;}
 .orderBoxP span strong {font-size: 16px;margin:0 10px; font-weight: normal;}
@@ -236,6 +236,16 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderJlCon {padding:10px 25px;}
 .orderJlCon p {line-height: 3;}
 .orderJlSpan {}
+
+/* aycmjz.html 我的订单-阿姨采买记账 */
+.orderCmjzP {padding: 0 15px;padding-top: 0px;padding-right: 15px;background:#F5FAFD;padding-bottom: 0px;padding-left: 15px;height: 30px;line-height: 30px;border-right: 1px solid #379BFF;border-left: 1px solid #379BFF;}
+.orderCmjzP span {float:left; color:#666;}
+.orderCma1 {font-weight: bold; float: right;margin-right: 42px;}
+.orderCma2 {display: inline-block;width: 16px;height: 16px; margin-top: 7px;background: url(../images/uicon14.png) no-repeat;float: right;}
+.orderCMTable {width:100%;}
+.orderCMTable tr th,.orderCMTable tr td {padding:5px 15px; border:1px solid #379BFF; text-align: center;}
+.orderCMTable tr td:nth-child(3) {text-align: left;}
+
 
 
 

@@ -1,4 +1,4 @@
-<div class="wrapBox" ui-view>
+<div class="wrapBox">
 	<div class="orderNav" ng-include="'public/orderNav.html'"></div>
 	<h2 class="infoH2 pt0">我的订单信息</h2>
 	<div class="orderBox mb20">
@@ -15,7 +15,7 @@
 			<p><strong>备注说明：</strong>我是备注我是备注我是备注</p>
 		</div>
 	</div>
-	<div class="orderBox">
+	<div class="orderBox" style="border-bottom:0">
 		<p class="orderBoxP"><span id="curOrderSP">新增订单一<strong>|</strong>00188</span><span>新增订单二<strong>|</strong>00189</span></p>
 		<p class="orderBoxP2 clearfix"><a href="">添加备忘录</a><input type="text" onClick="WdatePicker({maxDate:'%y-%M-%d'})" class="Wdate"/></p>
 		<div class="orderBoxCon">
@@ -99,18 +99,12 @@
 			</table>
 		</div>
 	</div>
+</div>
 <script type="text/javascript">
 	$(function(){
-		$('.orderBoxP span').click(function(){
-			$(this).siblings().removeAttr('id');
-			$(this).attr('id','curOrderSP');
-			$('div.orderBoxCon').hide();
-			$('div.orderBoxCon').eq($(this).index()).show();
-		});
 		//删除最后一个tr
 		$('.orderBCTable').each(function(){
 			$(this).find('tr:last').remove();
 		});
 	});
 </script>
-</div>

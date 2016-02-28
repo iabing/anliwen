@@ -1,7 +1,7 @@
-<div class="wrapBox" ui-view controller="uController">
+<div class="wrapBox" controller="uController">
 	<div class="orderNav" ng-include="'public/orderNav.html'"></div>
 	<h2 class="infoH2 pt0">服务评价</h2>
-	<div class="orderBox" style="border:0; w920px;">
+	<div class="orderBox" style="border:0; width:920px;">
 		<p class="orderBoxP" style="border-top:1px solid #379BFF;border-left:1px solid #379BFF;border-right:1px solid #379BFF;border-bottom:0"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨</span><span>订单二<b>·</b>00189　|　王群伟阿姨</span></p>
 		<div class="orderConDemo">
 			<form method="post" action="xxx.php">
@@ -199,3 +199,11 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	$('.orderBoxP span').click(function(){
+		$(this).siblings().removeAttr('id');
+		$(this).attr('id','curOrderSP');
+		$('div.orderConDemo').hide();
+		$('div.orderConDemo').eq($(this).index()).show();
+	});
+</script>

@@ -1,3 +1,20 @@
-<div class="wrapBox" ui-view>
-aycqtj.html
+<link rel="stylesheet" type="text/css" href="css/easyui.css" />
+<script type="text/javascript">
+    /*require(['easyui', 'fullcalendar']);*/
+    var str = '<script type="text/javascript" src="js/easyui.js"><\/script><script type="text/javascript" src="js/fullcalendar.js"><\/script>';
+    $(function(){
+        $('.wrapBox').append(str);
+    });
+</script>
+<div class="wrapBox" ng-controller="cgtjController">
+    <div class="orderNav" ng-include="'public/orderNav.html'"></div>
+    <h2 class="infoH2 pt0">阿姨采买记账</h2>
+    <div class="orderBox" style="border:0;width:920px">
+        <p class="orderBoxP" style="border:1px solid #379BFF"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨</span><span>订单二<b>·</b>00189　|　王群伟阿姨</span></p>
+    </div>
+    <div class="easyui-layout">
+        <div region="center">
+            <div class="easyui-fullCalendar" fit="true"></div>
+        </div>
+    </div>
 </div>
