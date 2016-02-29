@@ -46,15 +46,15 @@ app.config(function($stateProvider, $urlRouterProvider){
  $stateProvider
    .state('home', {  //首页
      url: '',
-     templateUrl: 'page/myOrder/fwjl.html'
+     templateUrl: 'page/myOrder/wdddxx.html'
    })
    .state('order',{  //订单
      url: '/order',
-     'templateUrl': 'page/myOrder/fwjl.html'
+     'templateUrl': 'page/myOrder/wdddxx.html'
    })
    .state('wdddxx',{ //订单
      url: '/wdddxx',
-     templateUrl: 'page/myOrder/fwjl.html'
+     templateUrl: 'page/myOrder/wdddxx.html'
    })
    .state('fwayxx',{
      url: '/fwayxx',
@@ -88,12 +88,12 @@ app.config(function($stateProvider, $urlRouterProvider){
      url: '/aycqtj',
      templateUrl: 'page/myOrder/aycqtj.html',
      controller: 'cgtjController',
-     resolve: {
+     /*resolve: {
         getUrl: function($http){
           $http.get('js/easyui.js');
           $http.get('js/fullcalendar.js');
         }
-     }
+     }*/
    })
    .state('fwpj',{
      url: '/fwpj',
@@ -109,7 +109,7 @@ app.config(function($stateProvider, $urlRouterProvider){
      templateUrl: 'page/myOrder/ddap.html'
    })
    .state('fwjl',{
-     url: '/ddap',
+     url: '/fwjl',
      templateUrl: 'page/myOrder/fwjl.html'
    })
    .state('wlzm',{
@@ -124,7 +124,73 @@ app.config(function($stateProvider, $urlRouterProvider){
      url: '/fwxc',
      templateUrl: 'page/myOrder/fwxc.html'
    })
+   /* 我的资料等 */
+   .state('jbzl',{
+	   	url: '/jbzl',
+	   	templateUrl: 'page/myInfos/jbzl.html'
+   })
+   .state('wdtx',{
+	   	url: '/wdtx',
+	   	templateUrl: 'page/myInfos/wdtx.html'
+   })
+   .state('dljl',{
+	   	url: '/dljl',
+	   	templateUrl: 'page/myInfos/dljl.html'
+   })
+   .state('xgmm',{
+	   	url: '/jbzl',
+	   	templateUrl: 'page/myInfos/xgmm.html'
+   })
+   //百科
+   .state('bkwd',{
+	   	url: '/bkwd',
+	   	templateUrl: 'page/baike/bkwd.html'
+   })
+   //论坛
+   .state('lthd',{
+	   	url: '/lthd',
+	   	templateUrl: 'page/forum/lthd.html'
+   })
+   //我的学堂
+   .state('wdxt',{
+      url: '/wdxt',
+      templateUrl: 'page/mySchool/wdxt.html'
+   })
+   //我的评价
+   .state('fwdc',{
+	   	url: '/fwdc',
+	   	templateUrl: 'page/myReview/fwdc.html'
+   })
+   .state('wdpj',{
+	   	url: '/wdpj',
+	   	templateUrl: 'page/myReview/wdpj.html'
+   })
+   //我的管家
+   .state('gjzz',{
+	   	url: '/gjzz',
+	   	templateUrl: 'page/myHouse/gjzz.html'
+   })
+   .state('fwyf',{
+	   	url: '/fwyf',
+	   	templateUrl: 'page/myHouse/fwyf.html'
+   })
+   .state('gljs',{
+	   	url: '/gljs',
+	   	templateUrl: 'page/myHouse/gljs.html'
+   })
+   .state('jszx',{
+	   	url: '/jszx',
+	   	templateUrl: 'page/myHouse/jszx.html'
+   })
+   .state('tsgl',{
+	   	url: '/tsgl',
+	   	templateUrl: 'page/myHouse/tsgl.html'
+   })
+
 });
+	
+
+
 
 app.controller('myCtrl', function($scope){
 

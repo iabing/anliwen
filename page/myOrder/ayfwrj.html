@@ -1,3 +1,76 @@
 <div class="wrapBox">
-ayfwrj.html
+    <div class="orderNav" ng-include="'public/orderNav.html'"></div>
+    <h2 class="infoH2 pt0">阿姨服务日记</h2>
+    <div class="orderBox">
+        <p class="orderBoxP"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨</span><span>订单二<b>·</b>00189　|　王群伟阿姨</span></p>
+		<div class="orderBoxCon">
+			<div class="orderRjwrap">
+				<h2>2015.09.18 初六 周五</h2>
+				<a href="" class="orderRjAl1">上一天</a>
+				<a href="" class="orderRjAl2">下一天</a>
+				<div class="orderRjcon">
+					<div class="orderRjdemo clearfix">
+						<p>1</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>2</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>3</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布喂奶123毫升 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>4</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>5</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="orderBoxCon" style="display:none">
+			<div class="orderRjwrap">
+				<h2>2015.09.19 初七 周六</h2>
+				<a href="" class="orderRjAl1">上一天</a>
+				<a href="" class="orderRjAl2">下一天</a>
+				<div class="orderRjcon">
+					<div class="orderRjdemo clearfix">
+						<p>1</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>2</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>3</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布喂奶123毫升 洗脸 喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>4</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喝水 喂奶123毫升</p>
+					</div>
+					<div class="orderRjdemo clearfix">
+						<p>5</p>
+						<p><time>06:00-07:00</time><br/>宝宝起床听音乐 给宝宝换尿布 洗脸 喝水 喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升喂奶123毫升</p>
+					</div>
+				</div>
+			</div>
+		</div>
+    </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        //订单一、二切换
+        $('.orderBoxP span').click(function(){
+            $(this).siblings().removeAttr('id');
+            $(this).attr('id','curOrderSP');
+            $('div.orderBoxCon').hide();
+            $('div.orderBoxCon').eq($(this).index()).show();
+          });
+    });
+</script>

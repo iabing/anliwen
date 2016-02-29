@@ -141,3 +141,14 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    $(function(){
+        //订单一、二切换
+        $('.orderBoxP span').click(function(){
+            $(this).siblings().removeAttr('id');
+            $(this).attr('id','curOrderSP');
+            $('div.orderBoxCon').hide();
+            $('div.orderBoxCon').eq($(this).index()).show();
+          });
+    });
+</script>

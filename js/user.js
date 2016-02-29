@@ -44,12 +44,12 @@
     $(this).addClass('curSubNav');
   });
   //订单一、二切换
-  $('.orderBoxP span').click(function(){
+  /*$('.orderBoxP span').click(function(){
       $(this).siblings().removeAttr('id');
       $(this).attr('id','curOrderSP');
       $('div.orderBoxCon').hide();
       $('div.orderBoxCon').eq($(this).index()).show();
-    });
+    });*/
  });
 
  //检验手机号码

@@ -7,7 +7,9 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 
 .calendar{
 	background:white;
-	border:1px solid #A4BED4;
+	border-left:1px solid #3B92FB;
+	border-right:1px solid #3B92FB;
+	border-bottom:1px solid #3B92FB;
 	/*padding:1px;*/
 	overflow:hidden;
 }
@@ -17,14 +19,15 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 }
 .calendar-header{
 	position:relative;
-	background:#E0366E;
-	font-size:12px;
+	background:#D588C5;
+	font-size:14px;
 	height:40px;
+	line-height: 40px;
 	text-align:center;
-	border-left: 1px #eee solid;
 }
 .calendar-header a{
 	color: white;
+	display:inline-block;
 }
 .calendar-title{
 	text-align:center;
@@ -44,34 +47,29 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 .calendar-prevmonth,.calendar-nextmonth,.calendar-prevyear,.calendar-nextyear{
 /*	position:absolute;
 	top:4px;*/
-	margin-top:12px;
+	margin:0px 20px;
 	display:inline-block;
-	width:14px;
-	height:11px;
+	width:10px;
+	height:16px;
 	line-height:12px;
 	cursor:pointer;
-	font-size:1px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
-	border-radius:4px;
+	font-size:14px;
 
-	
-	
 }
 .calendar-prevmonth{
-	background:url('images/calendar_prevmonth.gif') no-repeat center;
+	background:url('../images/uicon25.png') no-repeat center; position: relative; top:2px;
 }
 .calendar-nextmonth{
 
-	background:url('images/calendar_nextmonth.gif') no-repeat center;
+	background:url('../images/uicon26.png') no-repeat center;position: relative; top:2px;
 }
 .calendar-prevyear{
 
-	background:url('images/calendar_prevyear.gif') no-repeat center;
+	background:url('../images/uicon25.png') no-repeat center;position: relative; top:2px;
 }
 .calendar-nextyear{
 
-	background:url('images/calendar_nextyear.gif') no-repeat center;
+	background:url('../images/uicon26.png') no-repeat center;position: relative; top:2px;
 }
 .calendar-body{
 	font-size:12px;
@@ -80,20 +78,22 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 .calendar-body table{
 	width:100%;
 	height:100%;
-	font-size:12px;
+	font-size:14px;
 
 	}
+
 .calendar-body th,.calendar-body td{
 	text-align:center;
 }
 .calendar-body th{
-	background:#fafafa;
-	color:#888;
-    border-left: 1px #eee solid;
+	background:#EC94DA;
+	color:#fff;
 }
+.calendar-body th,.calendar-body td {border:1px solid #E7E7E7;}
 .calendar-day{
 	color:#222;
 	cursor:pointer;
+	position: relative;
 /*	border:1px solid #fff;
 	-moz-border-radius:4px;
 	-webkit-border-radius:4px;
@@ -123,7 +123,7 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 	color: white !important;
 }
 .calendar-nav-hover{
-	background-color:white;
+	/* background-color:white; */
 }
 
 
@@ -161,14 +161,14 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 }
 .calendar-menu-prev{
 	margin-right:10px;
-	background:url('images/calendar_prevyear.gif') no-repeat 5px 6px;
+	background:url('../images/uicon25.png') no-repeat 5px 6px;
 }	
 .calendar-menu-next{
 	margin-left:10px;
-	background:url('images/calendar_nextyear.gif') no-repeat 5px 6px;
+	background:url('../images/uicon26.png') no-repeat 5px 6px;
 }
 .calendar-menu-hover{
-	background-color:#c73062;
+	/* background-color:#c73062; */
 	color: white !important;
 }
 .calendar-menu-month-inner table{
@@ -341,3 +341,8 @@ a,span,p,label,i,em,strong,font,div,li,h1,h2,h3,h4,h5,h6,b,input,option,ol,ul,th
 	border:0;
 	overflow:hidden;
 }*/
+.fullcalendar-day {border-left: 1px solid #eee;border-top: 1px solid #eee;} 
+.calendar-hover{background:rgb(129, 208, 242);}.fullcalendar-body th{padding: 5px;height:20px;}
+.fullcalendar-detail{border-radius:5px;position: absolute; z-index: 10; background-color: #E0366E; display: none; padding: 5px; text-align: right;width:150px;}
+.fullcalendar-detail div{background:#f8f8f8;margin-top: 3px;font-size: 12px;padding: 2px;}
+.fullcalendar-detail .lunarFestival{color: red;}.fullcalendar-detail .solarFestival{color: #000;}
