@@ -911,7 +911,7 @@
      			if (info && (info.lunarFestival || info.solarFestival)) {
 					day.addClass('festival');
 				}
-				day.hover(function (e) {
+				/*day.hover(function (e) {
 					clearTimeout(hideTimer);
 					var inf = $(this).data('info');
 		
@@ -936,7 +936,7 @@
 					hideTimer = setTimeout(function () {
 							$('div.fullcalendar-detail').hide();
 						}, 500);
-				});
+				});*/
 			}
 		}
 		//a_bing添加 底部 加班、请假、出勤

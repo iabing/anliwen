@@ -175,18 +175,18 @@
 		<p class="orderBoxP" style="border-left:1px solid #379BFF;border-right:1px solid #379BFF;border-top:1px solid #379BFF;border-bottom:0;"><span id="curOrderSP">订单一<b>·</b>00188　|　王群伟阿姨 详细信息</span><span>订单二<b>·</b>00189　|　王群伟阿姨 详细信息</span></p>
 		<div class="orderAyxDemo">
 			<p class="orderAyxPb">
-				<a href="javascript:void(0)" class="curSubNav">素质测评详情</a>　|　
+				<a href="javascript:void(0)">素质测评详情</a>　|　
 				<a href="javascript:void(0)">技能测评详情<b>·</b>育婴</a>　|　
 				<a href="javascript:void(0)">职业愿景</a>　|　
 				<a href="javascript:void(0)">培训计划</a>　|　
 				<a href="javascript:void(0)">职业经历</a>　|　
 				<a href="javascript:void(0)">雇主评价综述</a>　|　
-				<a href="javascript:void(0)">形象语言视频</a>　|　
+				<a href="javascript:void(0)" class="curSubNav">形象语言视频</a>　|　
 				<a href="javascript:void(0)">服务展示</a>　|　
 				<a href="javascript:void(0)">家庭成员</a>
 			</p>
 			<div class="orderAyxSubDemo">
-				<table class="orderAyxSubTable">
+				<table class="orderAyxSubTable" style="display:none">
 					<tr>
 						<th>素质类别</th>
 						<th>分值</th>
@@ -312,18 +312,11 @@
 						<td></td>
 					</tr>
 				</table>
-				<table class="orderAyxSubTable" style="display:none">
+				<table class="orderAyxSubTable">
 					<tr>
-						<th>素质类别222</th>
-						<th>分值22</th>
-						<th>综合评价22</th>
-						<th>最后评价日期22</th>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>
+							<div id="container"></div>
+						</td>
 					</tr>
 				</table>
 				<table class="orderAyxSubTable" style="display:none">
@@ -358,18 +351,18 @@
 		</div>
 		<div class="orderAyxDemo" style="display:none">
 			<p class="orderAyxPb">
-				<a href="javascript:void(0)" class="curSubNav">素质测评详情</a>　|　
+				<a href="javascript:void(0)">素质测评详情</a>　|　
 				<a href="javascript:void(0)">技能测评详情<b>·</b>育婴</a>　|　
 				<a href="javascript:void(0)">职业愿景</a>　|　
 				<a href="javascript:void(0)">培训计划</a>　|　
 				<a href="javascript:void(0)">职业经历</a>　|　
 				<a href="javascript:void(0)">雇主评价综述</a>　|　
 				<a href="javascript:void(0)">形象语言视频</a>　|　
-				<a href="javascript:void(0)">服务展示</a>　|　
+				<a href="javascript:void(0)" class="curSubNav">服务展示</a>　|　
 				<a href="javascript:void(0)">家庭成员</a>
 			</p>
 			<div class="orderAyxSubDemo">
-				<table class="orderAyxSubTable">
+				<table class="orderAyxSubTable" style="display:none">
 					<tr>
 						<th>素质类别</th>
 						<th>分值</th>
@@ -509,18 +502,26 @@
 						<td></td>
 					</tr>
 				</table>
-				<table class="orderAyxSubTable" style="display:none">
+				<table class="orderAyxSubTable">
 					<tr>
-						<th>素质类别222</th>
-						<th>分值22</th>
-						<th>综合评价22</th>
-						<th>最后评价日期22</th>
-					</tr>
-					<tr>
-						<td></td>
-						<td></td>
-						<td></td>
-						<td></td>
+						<td>
+							<div class="orderImgBox clearfix">
+								<div class="orderLeft">
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+								</div>
+								<div class="orderCenter">
+									<p><img src="images/uimg02.png" alt="做事认真，手脚麻利" id="targetImg"></p>
+									<p id="targetP">做事认真，手脚麻利</p>
+								</div>
+								<div class="orderRight">
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+									<p><img src="images/uicon24.png" alt="做事认真，手脚麻利"></p>
+								</div>
+							</div>
+						</td>
 					</tr>
 				</table>
 				<table class="orderAyxSubTable" style="display:none">
@@ -541,6 +542,21 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jwplayer.js"></script>
+<script type="text/javascript" src="js/jwplayer.html5.js"></script>
+<script type="text/javascript">jwplayer.key="tBSvG+AaiiUjygRRf58rlI5Phug6zXFZjVqYQg==";</script>
+<style type="text/css">
+	#container {margin: 0 auto;}
+	.orderImgBox {width: 880px; height: 330px;margin:20px auto;}
+	.orderLeft {float: left;}
+	.orderRight {float: right;}
+	.orderCenter {position:relative;width: 560px;height: 330px; float: left; margin-left:15px;}
+	.orderCenter p:last-child {position: absolute; left:0; bottom:0; width: 100%; height:35px; line-height: 35px;text-indent: 1em;color:#fff; font-size: 14px;background: #000; filter:alpha(opacity=60); opacity:.6;text-align: left;}
+	.orderCenter img {width: 560px;height: 330px;}
+	.orderLeft img,.orderRight img {width: 145px;height: 105px;margin-bottom: 7px;cursor:pointer;}
+
+</style>
 <script type="text/javascript">
 	$(function(){
 		$('.orderBoxP span').click(function(){
@@ -556,5 +572,31 @@
 			$(this).parents('.orderAyxDemo').find('.orderAyxSubTable').hide();
 			$(this).parents('.orderAyxDemo').find('.orderAyxSubTable').eq($(this).index()).show();
 		});
+		//图片切换
+		$('.orderLeft img,.orderRight img').click(function(){
+			$('#targetImg').attr('src',$(this).attr('src'));
+			$('#targetP').html($(this).attr('alt'));
+		});
 	});
+	//视频播放
+	var thePlayer;  //保存当前播放器以便操作
+	thePlayer = jwplayer('container').setup({
+	    flashplayer: 'media/jwplayer.flash.swf',
+	    file: 'media/test.mp4',
+	    width: 500,
+	    height: 350,
+	    dock: false
+	});
+
+	//跳转到指定位置播放
+	$('.player-goto').click(function() {
+	    if (thePlayer.getState() != 'PLAYING') {    //若当前未播放，先启动播放器
+	        thePlayer.play();
+	    }
+	    thePlayer.seek(30); //从指定位置开始播放(单位：秒)
+	});
+	
+	//获取视频长度
+	$('.player-length').click(function() { alert(thePlayer.getDuration()); });
+	
 </script>

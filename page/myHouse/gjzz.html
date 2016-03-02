@@ -1,3 +1,56 @@
 <div class="wrapBox">
 	<h2 class="infoH2">管家职责</h2>
+	<div class="gjContainer">
+		<p class="gjTabP"><span class="curGjSpan">专职育婴</span><span>协助家务1</span><span>协助家务2</span></p>
+		<div class="gjCon">
+			<div class="zzTop">
+				<p><b>姓　名：</b>王立群</p>
+				<p><b>性　别：</b>女</p>
+				<p><b>年　龄：</b>35岁</p>
+				<p><b>学　历：</b>大专</p>
+				<p><b>电话号：</b>15625252525</p>
+				<p><b>微信号：</b>15625252525</p>
+				<p><b>Q Q 号：</b>15625252525</p>
+				<p><b>到任时间：</b>2015.12.25</p>
+				<p><b>离任时间：</b>2015.12.25</p>
+				<p><b>管家经理：</b>王哥哥</p>
+				<p><b>电话号：</b>15625252525</p>
+				<p><b>Q Q 号：</b>25252525</p>
+				<p><b>生活馆地址：</b>XXXXXXXX</p>
+				<p><b>电话：</b>25252525</p>
+				<p><b>管家简介：</b></p>
+			</div>
+			<p class="zzP">管家职责</p>
+			<div class="zzBottom">
+				<p>安丽文管家是客户的贴心人、生活顾问、雇佣间的桥梁、阿姨的服务指导管理老师…</p>
+				<p>管家职责：</p>
+				<p>1、以客户利益为导向，加强与客户的沟通，透彻了解客户个性化服务需求的内容、要求和条件；</p>
+				<p>2、从安丽文丰富的服务阿姨资源库中筛选、匹配最适合客户的人选，并进行岗前指导；</p>
+				<p>3、根据约定的服务事宜和要求与客户、阿姨共同制定服务方案：服务流程、方法和标准，签订服务合同、服务标准约定、雇佣规章；</p>
+				<p>4、全程跟踪、督促、指导阿姨的服务，促使服务品质保持良好与稳定；</p>
+				<p>5、与客户、阿姨保持互动交流，积极疏导、影响双方的情绪心态，增进雇佣间的友情； </p>            
+				<p>6、及时介入雇佣间的摩擦和矛盾，有效弥合彼此间的裂隙；</p>
+				<p>7、提前干预雇佣间不适应状态，及时为客户调换更为适合的服务阿姨；</p>
+				<p>8、为客户提供家庭生活咨询服务；</p>
+				<p>9、安丽文赋予的其他职责；</p>
+				<p>10、以客户利益为目标，提供其他有关增值服务，让客户享受安丽文“放心、安心、省心、精心、开心”的优质服务。 </p>
+			</div>
+		</div>
+		<div class="gjCon" style="display:none">
+			content2
+		</div>
+		<div class="gjCon" style="display:none">
+			content3
+		</div>
+	</div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$('.gjTabP span').click(function(){
+			$(this).siblings().removeClass('curGjSpan');
+			$(this).addClass('curGjSpan');
+			$('.gjCon').hide();
+			$('.gjCon').eq($(this).index()).show();
+		});
+	});
+</script>

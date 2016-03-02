@@ -1,3 +1,135 @@
 <div class="wrapBox">
 	<h2 class="infoH2">管理纪实</h2>
+	<div class="gjContainer">
+		<p class="gjTabP"><span class="curGjSpan">专职育婴</span><span>协助家务1</span><span>协助家务2</span></p>
+		<div class="gjCon pt0">
+			<p class="jsTimeP"><span id="jsTimeL"></span><span>管理纪实</span><span id="jsTimeB" onClick="WdatePicker({maxDate:'%y-%M',dateFmt:'yyyy年MM月',isShowClear:false,readOnly:true,onpicked:PickedFunc})"></span><em>&hearts;</em><span id="jsTimeR"></span></p>
+			<div class="jsList">
+				<div class="jsListDemo clearfix">
+					<div>10</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电妈妈来电妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+				<div class="jsListDemo clearfix">
+					<div>9</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+				<div class="jsListDemo clearfix">
+					<div>8</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+				<div class="jsListDemo clearfix">
+					<div>7</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+				<div class="jsListDemo clearfix">
+					<div>6</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+				<div class="jsListDemo clearfix">
+					<div>5</div>
+					<div>10月30日</div>
+					<div>周五</div>
+					<div>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+						<p class="clearfix"><time>08:30</time><span title="宝宝妈妈来电，询问">【客户】宝宝妈妈来电，询问</span></p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="gjCon" style="display:none">
+			content2
+		</div>
+		<div class="gjCon" style="display:none">
+			content3
+		</div>
+	</div>
 </div>
+<script type="text/javascript">
+	$(function(){
+		$('.gjTabP span').click(function(){
+			$(this).siblings().removeClass('curGjSpan');
+			$(this).addClass('curGjSpan');
+			$('.gjCon').hide();
+			$('.gjCon').eq($(this).index()).show();
+		});
+		//日历,默认日期
+		$('#jsTimeB').html(''+new Date().getFullYear()+'年'+(new Date().getMonth()+1)+'月');
+		//月份切换
+		$('#jsTimeL').click(function(){
+			/*var y = parseInt($dp.cal.getP('y'));
+			var m = parseInt($dp.cal.getP('M'));*/
+			var y = parseInt($('#jsTimeB').html().substr(0,4));
+			var m = parseInt($('#jsTimeB').html().substr(5,2));
+			if(m === 1){
+				m = 12;
+				y = y - 1;
+			}else{
+				m = m - 1;
+			}
+			if(m < 10){
+				m = '0'+m;
+			}
+			//console.log(y+'-'+m);
+			$('#jsTimeB').html(y+'年'+m+'月');
+		});
+		$('#jsTimeR').click(function(){
+			var y = parseInt($('#jsTimeB').html().substr(0,4));
+			var m = parseInt($('#jsTimeB').html().substr(5,2));
+			var cury = new Date().getFullYear();
+			var curm = new Date().getMonth()+1;
+			var curtime = new Date(cury,curm,0).getTime();
+			var time = new Date(y,m,0).getTime();
+			if(time < curtime){
+				if(m === 12){
+					m = 1;
+					y = y + 1;
+				}else{
+					m = m + 1;
+				}
+				if(m < 10){
+					m = '0'+m;
+				}
+				//console.log(y+'-'+m);
+				$('#jsTimeB').html(y+'年'+m+'月');
+			}
+		});
+		
+
+	});
+	//返回年月
+	function PickedFunc(){
+		console.log($dp.cal.getP('y'));
+		console.log($dp.cal.getP('M'));
+	}
+</script>

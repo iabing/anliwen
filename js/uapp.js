@@ -109,12 +109,16 @@ app.config(function($stateProvider, $urlRouterProvider){
      templateUrl: 'page/myOrder/ddap.html'
    })
    .state('fwjl',{
-     url: '/fwjl',
-     templateUrl: 'page/myOrder/fwjl.html'
+     url: '/ayfwrj',
+     templateUrl: 'page/myOrder/ayfwrj.html'
    })
    .state('wlzm',{
      url: '/wlzm',
      templateUrl: 'page/myOrder/wlzm.html'
+   })
+   .state('zhcz',{
+     url: '/zhcz',
+     templateUrl: 'page/myOrder/zhcz.html'
    })
    .state('ddls',{
      url: '/ddls',
@@ -138,7 +142,7 @@ app.config(function($stateProvider, $urlRouterProvider){
 	   	templateUrl: 'page/myInfos/dljl.html'
    })
    .state('xgmm',{
-	   	url: '/jbzl',
+	   	url: '/xgmm',
 	   	templateUrl: 'page/myInfos/xgmm.html'
    })
    //百科

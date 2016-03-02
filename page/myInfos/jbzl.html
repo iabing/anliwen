@@ -2,19 +2,20 @@
 	<h2 class="infoH2">基本资料</h2>
 	<div class="infoBox">
 		<form method="post" action="uinfo.php" class="infoForm">
-			<label>血型：<select name="xuexin">
+			<label>昵　　称：<input type="text" placeholder="输入昵称"></label>
+			<label>血　　型：<select name="xuexin">
 				<option value="0">A型</option>
 				<option value="1">B型</option>
 				<option value="2">AB型</option>
 				<option value="3">O型</option>
 			</select></label>
-			<label>体形：<select name="tixin">
+			<label>体　　形：<select name="tixin">
 				<option value="0">胖</option>
 				<option value="1">瘦</option>
 				<option value="2">微胖</option>
 				<option value="3">微瘦</option>
 			</select></label>
-			<label>身高：<select name="height">
+			<label>身　　高：<select name="height">
 				<option value="0">170cm</option>
 				<option value="1">165cm</option>
 				<option value="2">160cm</option>
@@ -33,7 +34,7 @@
 				<option value="3">初中</option>
 			</select></label>
 			<label>毕业院校：<input type="text" placeholder="输入学校名称"></label>
-			<label>职业：<select name="zhiye">
+			<label>职　　业：<select name="zhiye">
 				<option value="0">前端开发</option>
 				<option value="1">后台开发</option>
 				<option value="2">设计</option>
@@ -45,23 +46,18 @@
 				<option value="2">3000-4000</option>
 				<option value="3">4000-5000</option>
 			</select></label>
-			<label>所在地：<select name="sheng">
-				<option value="0">请选择</option>
-				<option value="1">B型</option>
-				<option value="2">AB型</option>
-				<option value="3">O型</option>
-			</select></label>
-			<label>通讯地址：<input type="text" placeholder="输入地址"></label>
-			<label>Q Q：<input type="text" placeholder="请输入"></label>
-			<label>微博：<input type="text" placeholder="请输入"></label>
-			<label>手机号：<input type="text" placeholder="请输入"></label>
-			<label>民族：<select name="minzu">
+			<label>所在地：　<select name="location_p" id="location_p"></select><select name="location_c" id="location_c"></select><select name="location_a" id="location_a"></select></label>
+			<label>通讯地址：<input type="text" placeholder="输入地址"><span class="ml10 fs12">（不用输入省市区）</span></label>
+			<label>QQ　　：&nbsp;<input type="text" placeholder="请输入"></label>
+			<label>微　　博：<input type="text" placeholder="请输入"></label>
+			<label>手机号：　<input type="text" placeholder="请输入"></label>
+			<label>民　　族：<select name="minzu">
 				<option value="0">A型</option>
 				<option value="1">B型</option>
 				<option value="2">AB型</option>
 				<option value="3">O型</option>
 			</select></label>
-			<label>星座：<select name="xinzuo">
+			<label>星　　座：<select name="xinzuo">
 				<option value="0">A型</option>
 				<option value="1">B型</option>
 				<option value="2">AB型</option>
@@ -84,3 +80,7 @@
 		</form>
 	</div>
 </div>
+<script type="text/javascript" src="js/region_select.js"></script>
+<script type="text/javascript">
+	new PCAS('location_p', 'location_c', 'location_a', '云南省', '昆明市', '西山区');
+</script>

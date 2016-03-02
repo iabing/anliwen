@@ -1,3 +1,63 @@
+<link rel="stylesheet" type="text/css" href="css/datepicker.css" />
 <div class="wrapBox">
 	<h2 class="infoH2">服务有方</h2>
+	<div class="gjContainer">
+		<p class="gjTabP2"><span class="curGjSpan">专职育婴</span><span>协助家务</span></p>
+		<div class="gjCon pb0">
+			<div class="yfBox1">
+				<p class="yfHP">客户的服务重点要求</p>
+				<p></p>
+			</div>
+			<div class="yfBox2">
+				<p class="yfHP">服务计划及相关方法<small>（计划与方法须经客户确认后实施）</small></p>
+				<div class="fyB2Div">
+					<a href="javascript:void(0)">总体计划</a>
+					<a href="javascript:void(0)">家庭环境</a>
+					<a href="javascript:void(0)">安全保障</a>
+					<a href="javascript:void(0)">卫生规范</a>
+					<a href="javascript:void(0)">营养计划</a>
+					<a href="javascript:void(0)">作息时间</a>
+					<a href="javascript:void(0)">肢体训练</a>
+					<a href="javascript:void(0)">疾病预防</a>
+					<a href="javascript:void(0)">智力开发</a>
+					<a href="javascript:void(0)">语言训练</a>
+					<a href="javascript:void(0)">人格培养</a>
+					<a href="javascript:void(0)">知识储备</a>
+					<a href="javascript:void(0)"><b>+</b></a>
+				</div>
+			</div>
+			<div class="fyBox3">
+				<p class="yfHP">营养计划</p>
+				<p>说明：（针对宝宝生长情况所作的关于营养计划说明，其中需要提醒若宝宝生病等原因要调整包含计划）</p>
+			</div>
+			<div class="fyBox4">
+				<div class="easyui-layout" style="width:920px;height:600px">
+				    <div region="center">
+				        <div class="easyui-fullCalendar" fit="true"></div>
+				    </div>
+				</div
+			</div>
+		</div>
+		<div class="gjCon" style="display:none">
+			content2
+		</div>
+	</div>
 </div>
+<style type="text/css">
+	.calendar-header {background: #23C9A0;}
+	.calendar-body th {background: #35DCB3;}
+</style>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullcalendar2.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.gjTabP span').click(function(){
+			$(this).siblings().removeClass('curGjSpan');
+			$(this).addClass('curGjSpan');
+			$('.gjCon').hide();
+			$('.gjCon').eq($(this).index()).show();
+		});
+
+	});
+</script>
