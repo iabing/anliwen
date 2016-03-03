@@ -7,7 +7,7 @@
  */
 
  //require.js配置文件
- require.config({
+ /*require.config({
      paths: {
          'jquery': 'jquery',
          'WdatePicker': 'My97DatePicker/WdatePicker',
@@ -26,9 +26,8 @@
         }
     }
  })
- require(['WdatePicker'], function(){  //加载WdatePicker
-
- });
+ require(['WdatePicker']);*/
+ //require(['layer']);
 
  $(function(){
   //个人中心 导航切换

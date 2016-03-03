@@ -129,10 +129,10 @@
                 success: function (data, status)  //服务器成功响应处理函数
                 {
 					//var json = eval('(' + data + ')');
-                    //alert(data);
+                    //layer.msg(data);
                     $("#picture_original>img").attr({src: data.src, width: data.width, height: data.height});
 					$('#imgsrc').val(data.path);
-					//alert(data.msg);
+					//layer.msg(data.msg);
 
 					//同时启动裁剪操作，触发裁剪框显示，让用户选择图片区域
 					var cutter = new jQuery.UtrialAvatarCutter({
@@ -168,7 +168,7 @@
                 },
                 error: function (data, status, e)//服务器响应失败处理函数
                 {
-                    alert(e);
+                    layer.msg(e);
                 }
 			})
 			return false;
@@ -178,9 +178,9 @@
 			$.getJSON('action2.php', {x: $('#x1').val(), y: $('#y1').val(), w: $('#cw').val(), h: $('#ch').val(), src: $('#imgsrc').val()}, function(data) {
 				if(data.msg){
 					$('#userphoto').attr('src',''+data.path);
-					alert('头像修改成功！');
+					layer.msg('头像修改成功！');
 				}else{
-					alert('修改失败');
+					layer.msg('修改失败');
 				}
 			});
 			return false;
@@ -225,15 +225,15 @@
 		        /*$.post('user.php?act=ajaxsystemp',{'src':src},function(data){
 		            if(data){
 		                $('#userphoto').attr('src',data.src);
-		                alert('保存成功！');
+		                layer.msg('保存成功！');
 		            }else{
-		                alert('保存失败！');
+		                layer.msg('保存失败！');
 		            }
 		        });*/
 		        $('#userphoto').attr('src',src);
 		        //location.reload();
 		    }else{
-		        alert('请先选择头像！');
+		        layer.msg('请先选择头像！');
 		    }
 		});
     });

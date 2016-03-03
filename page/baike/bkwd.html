@@ -1,3 +1,92 @@
 <div class="wrapBox">
 	<h2 class="infoH2">百科问答</h2>
+	<div class="bkTab">
+		<p class="bkTabP">
+			<span><i></i>我要查询</span>
+			<span class="curbkSpan"><i></i>我要提问</span>
+			<span><i></i>我来回答</span>
+			<span><i></i>百科建议</span>
+		</p>
+		<div class="bkTabCon">
+			<div class="bkTabCase" style="display:none">
+				我要查询
+			</div>
+			<div class="bkTabCase">
+				<div class="bkTabCTop">
+					<p class="bkOptionP">家庭百科&nbsp;&gt;&nbsp;
+						<span><em>母婴护理<small>&times;</small></em>&nbsp;&gt;</span>
+						<span><em>孕期保健<small>&times;</small></em>&nbsp;&gt;</span>
+					</p>
+					<div class="bkOptionDiv">
+						<h3>孕期保健</h3>
+						<a href="javascript:void(0)">母婴护理</a>
+						<a href="javascript:void(0)">育儿宝典</a>
+						<a href="javascript:void(0)">养老护理</a>
+						<a href="javascript:void(0)">病患护理</a>
+						<a href="javascript:void(0)">少儿家教</a>
+						<a href="javascript:void(0)">家居保洁</a>
+						<a href="javascript:void(0)">家庭膳食</a>
+						<a href="javascript:void(0)">宠物饲养</a>
+						<a href="javascript:void(0)">家庭植物</a>
+						<button class="bkOptionPosA">添加分类词</button>
+					</div>
+					<form method="post" action="" class="bkForm">
+						<input type="text" placeholder="请输入关键词" name="keywords"><input type="submit" value="搜索">
+					</form>
+				</div>
+				<div class="bkTabCB">
+					<div class="bkTabCBT">
+						<p>请选择问题分类　|　您也可以自主设定分类关键词</p>
+						<p>安丽文会员　|　分类：新生儿护理　|　被浏览5次　　2016.02.12</p>
+					</div>
+					<div class="bkTabCBB clearfix">
+						<form method="post" action="">
+						<p class="bkTabPhoto"><img src="images/uimg04.png"></p>
+						<div class="bkQuestionBox">
+							<div class="bkQBt">
+								<a href="javascript:void(0)"><i></i>图片</a>
+								<a href="javascript:void(0)"><i></i>找资料</a>
+							</div>
+							<div class="bkQBc"><textarea></textarea></div>
+							<div class="bkQBb">
+								<label><input type="radio" name="cate" value="0" checked="checked">&nbsp;安丽文会员</label>
+								<label><input type="radio" name="cate" value="1">&nbsp;匿名</label>
+							</div>
+						</div>
+						<p class="tar"><input type="submit" value="提交问题" class="bkQBbBtn"></p>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="bkTabCase" style="display:none">
+				我来回答
+			</div>
+			<div class="bkTabCase" style="display:none">
+				百科建议
+			</div>
+		</div>
+	</div>
 </div>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('.bkTabP span').click(function(){
+			$(this).siblings().removeClass('curbkSpan');
+			$(this).addClass('curbkSpan');
+			$('.bkTabCase').hide();
+			$('.bkTabCase').eq($(this).index()).show();
+		});
+		$('.bkOptionDiv a').live('click',function(){
+			var str = '<span><em>'+$(this).html()+'<small>&times;</small></em>&nbsp;&gt;</span>';
+			$('.bkOptionP').append(str);
+			$(this).remove();
+		});
+		$('.bkOptionP small').live('click',function(){
+			var obj = $(this).parent().parent();
+			var subStr = $(this).parent().text().slice(0,-1);
+			var str = '<a href="javascript:void(0)">'+subStr+'</a>';
+			$('.bkOptionDiv').append(str);
+			$(obj).remove();
+		});
+	});
+</script>

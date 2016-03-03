@@ -1,3 +1,117 @@
 <div class="wrapBox">
 	<h2 class="infoH2">我的评价</h2>
+	<div class="gjContainer">
+		<div class="pjBox">
+			<form method="post" action="">
+			<div class="pjBox-t">
+				<a href="javascript:void(0)" id="pjSelectA"><img src="images/uicon29.png">选择头像</a>
+			</div>
+			<div class="pjBox-c">
+				<textarea></textarea>
+			</div>
+			<div class="pjBox-b clearfix">
+				<p><strong>请您对我们的服务打分：</strong>
+				<label><input type="radio" name="score" value="100">&nbsp;100</label>
+				<label><input type="radio" name="score" value="90">&nbsp;90</label>
+				<label><input type="radio" name="score" value="80" checked="checked">&nbsp;80</label>
+				<label><input type="radio" name="score" value="70">&nbsp;70</label>
+				<label><input type="radio" name="score" value="60">&nbsp;60</label>
+				<label><input type="radio" name="score" value="50">&nbsp;50</label>
+				<label><input type="radio" name="score" value="40">&nbsp;40</label>
+				<label><input type="radio" name="score" value="30">&nbsp;30</label>
+				</p>
+				<input type="submit" value="提交评论">
+			</div>
+			</form>
+		</div>
+		<div class="pjBox2">
+			<h3>我的评价记录</h3>
+			<div class="pjCase clearfix">
+				<p><img src="images/uimg04.png"></p>
+				<div>
+					<p><span>曹太太</span><time>2015.09.15</time></p>
+					<p>很好！</p>
+				</div>
+				<span class="pjPosScore">评分95分</span>
+			</div>
+			<div class="pjCase clearfix">
+				<p><img src="images/uimg04.png"></p>
+				<div>
+					<p><span>曹太太</span><time>2015.09.15</time></p>
+					<p>很好！评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分评分95分</p>
+				</div>
+				<span class="pjPosScore">评分95分</span>
+			</div>
+			<div class="pjCase clearfix">
+				<p><img src="images/uimg04.png"></p>
+				<div>
+					<p><span>曹太太</span><time>2015.09.15</time></p>
+					<p>很好！</p>
+				</div>
+				<span class="pjPosScore">评分95分</span>
+			</div>
+			<div class="pjCase clearfix">
+				<p><img src="images/uimg04.png"></p>
+				<div>
+					<p><span>曹太太</span><time>2015.09.15</time></p>
+					<p>很好！</p>
+				</div>
+				<span class="pjPosScore">评分95分</span>
+			</div>
+			<div class="pjCase clearfix">
+				<p><img src="images/uimg04.png"></p>
+				<div>
+					<p><span>曹太太</span><time>2015.09.15</time></p>
+					<p>很好！</p>
+				</div>
+				<span class="pjPosScore">评分95分</span>
+			</div>
+		</div>
+	</div>
 </div>
+<!-- 弹出层 -->
+<div id="pjTipBox" style="display:none">
+	<img src="images/photo/photo1.jpg">
+	<img src="images/photo/photo2.jpg">
+	<img src="images/photo/photo3.jpg">
+	<img src="images/photo/photo4.jpg">
+	<img src="images/photo/photo5.jpg">
+	<img src="images/photo/photo6.jpg">
+	<img src="images/photo/photo7.jpg">
+	<img src="images/photo/photo8.jpg">
+	<img src="images/photo/photo9.jpg">
+	<img src="images/photo/photo10.jpg">
+	<img src="images/photo/photo11.jpg">
+	<img src="images/photo/photo12.jpg">
+	<img src="images/photo/photo13.jpg">
+	<img src="images/photo/photo14.jpg">
+	<img src="images/photo/photo15.jpg">
+	<img src="images/photo/photo16.jpg">
+	<img src="images/photo/photo17.jpg">
+	<img src="images/photo/photo18.jpg">
+	<img src="images/photo/photo19.jpg">
+	<img src="images/photo/photo20.jpg">
+</div>
+<style type="text/css">
+	#pjTipBox {width: 472px;height: 320px;padding:10px;}
+	#pjTipBox img {padding:2px; border:1px solid #e0e0e0;border-radius: 2px; margin:10px;cursor:pointer;}
+	#pjTipBox img:hover {border:1px solid #3B92FB;}
+</style>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#pjSelectA').click(function(){
+			var index = layer.open({
+			    type: 1,
+			    title: '选择头像',
+			    area: ['492px','430px'],
+			    scrollbar: false,
+			    content: $('#pjTipBox') //这里content是一个DOM
+			});
+		});
+		$('#pjTipBox img').click(function(){
+			$('#pjSelectA img').attr('src',$(this).attr('src'));
+			layer.closeAll();
+		});
+	});
+</script>

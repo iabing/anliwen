@@ -236,6 +236,7 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .orderJlP {border-bottom: 1px solid #379BFF; height: 35px;line-height: 35px;background: #379BFF; color:#fff; text-align: center;font-size: 15px;}
 .orderJlCon {padding:10px 25px;}
 .orderJlCon p {line-height: 3;}
+.orderJlCon p strong {margin-right: 5px;}
 .orderJlSpan {}
 
 /* aycmjz.html 我的订单-阿姨采买记账 */
@@ -421,6 +422,91 @@ footer {height: 60px;padding:25px 0; background: #3B92FB;margin-top: 30px;}
 .fyBox3 {margin-top: 20px;}
 .fyBox3 p:last-child {width: 866px;height: 120px;padding:5px;border:1px solid #e0e0e0; margin-top: 10px;}
 .fyBox4 {margin-top: 20px; position: relative; left:-21px; bottom:-1px;}
+
+/* 家事咨询 */
+.zxForm {width: 800px;}
+.zxP1 {margin:5px 0 0px 0;}
+.zxP1 label {display: inline-block; margin-left:28px;height: 25px;line-height: 25px;}
+.zxP1 label input {position: relative;top:-1px;}
+.zxP1 a {display: inline-block;width: 90px;height: 25px;line-height: 25px;font-size: 14px;border:1px solid #379BFF;border-radius: 2px;float: right;text-align: center;color:#777;}
+.zxForm textarea {min-width: 786px;min-height: 110px;padding: 5px;font-size: 13px;line-height: 1.5;border: 2px solid #379BFF;border-radius: 3px;margin-top: 5px;}
+.zxForm input[type='submit']{float: right;height: 32px;line-height: 32px;width: 85px;display: inline-block;font-size: 14px;color:#fff;background: #FF6600;border-radius: 3px;margin-top: 3px;}
+.zxForm p:last-child {margin-top: 10px;}
+.zxP2 {height: 35px;line-height: 35px;background: #379BFF;padding:0 10px;font-size: 14px;}
+.zxP2 a {padding:0 10px; color:#fff;}
+.zxP2 a.curzxA {color:#FF6B75;}
+.zxP2 a:hover {color:#FF6B75;}
+.zxList {padding:10px 20px;}
+.zxListCase {border-bottom: 1px dashed #e0e0e0; padding:10px 0; }
+.zxListCase p {line-height: 2;}
+.zxListCase p:last-child {color:#FF6B75;}
+
+/* 我的评价 */
+.pjBox {width: 918px;border:1px solid #379BFF; border-radius: 5px;}
+.pjBox-t {height: 33px;padding:8px 20px;background: #379BFF;}
+.pjBox-t a {color:#fff;font-size: 14px;}
+.pjBox-t a img {width: 33px;height: 33px;display:inline-block;margin-right: 10px;}
+.pjBox-c {width: 898px; padding:10px 20px;}
+.pjBox-c textarea {line-height: 1.8;color:#666;width: 100%;min-height:220px;}
+.pjBox-b {padding:8px 20px;background: #379BFF;}
+.pjBox-b p {height: 30px;line-height: 30px; color:#fff; font-size: 14px;width: 700px;float: left;}
+.pjBox-b p strong {margin-right: 10px;}
+.pjBox-b p label {display: inline-block;margin-right: 20px;}
+.pjBox-b p label input[type="text"] {position: relative; top:-1px;}
+.pjBox-b input[type='submit'] {display: inline-block;width: 130px;height: 30px;line-height: 30px;text-align: center;background: #FF7E27;color: #fff;font-size: 14px;border-radius: 5px;float: right;}
+.pjBox-b input[type='submit']:hover {filter:alpha(opacity=90); opacity:.9;}
+.pjBox2 {margin-top: 20px;}
+.pjBox2 h3 {font-size: 14px; color:#888;margin-bottom: 10px;}
+.pjCase {position:relative; width: 888px;padding:10px 15px; margin-bottom: 15px;border:2px solid #e0e0e0;border-radius: 3px;}
+.pjCase div {width: 800px;float: left;}
+.pjCase p:first-child {width: 66px;height: 66px;margin-right: 20px; float: left;}
+.pjCase p:first-child img {width: 62px;height: 62px;padding:2px; border:2px solid #e0e0e0;}
+.pjCase div p:nth-child(1) {width: 800px;height: 20px;line-height: 20px;margin:2px 0 3px 0;}
+.pjCase div p:nth-child(1) time {float: right;}
+.pjCase div p:last-child {line-height: 1.8;width: 720px;float: left;}
+.pjCase .pjPosScore {position: absolute;right:15px;bottom:10px;}
+
+/* 百科问答 */
+.bkTabP {height: 40px;line-height: 40px;}
+.bkTabP span {width: 135px;display:inline-block;height: 40px;margin-right: 5px;background: #9FBFDE; border-radius: 5px 5px 0 0;text-align: center;font-size: 14px;color:#fff; cursor:pointer;}
+.bkTabP span i {display: inline-block;margin-right: 10px;vertical-align: middle;}
+.bkTabP span:first-child i {width: 21px;height: 21px;background: url(../images/uicon17.png) no-repeat;}
+.bkTabP span:nth-child(2) i {width: 12px;height: 20px;background: url(../images/uicon18.png) no-repeat;}
+.bkTabP span:nth-child(3) i {width: 24px;height: 25px;background: url(../images/uicon19.png) no-repeat;}
+.bkTabP span:nth-child(4) i {width: 21px;height: 19px;background: url(../images/uicon30.png) no-repeat;}
+#ltTabSpan i {width: 20px;height: 23px;background: url(../images/uicon20.png) no-repeat;}
+.bkTabP .curbkSpan {background: #379BFF;}
+.bkTabCTop {width: 918px;padding:15px 0;border:1px solid #379BFF;}
+.bkOptionP {padding:0 15px; border-bottom: 1px solid #379BFF;padding-bottom: 10px;line-height: 1.8;}
+.bkOptionP span { display: inline-block; }
+.bkOptionP span em {padding:1px 3px;font-style:normal;background: #E0E0E0;}
+.bkOptionP span em small {font-size: 14px;margin-left:5px;cursor: pointer;}
+.bkOptionDiv {padding:0 15px;position: relative;}
+.bkOptionDiv h3 {font-weight: bold;margin:10px 0 5px;}
+.bkOptionDiv a {margin-right: 20px;line-height: 1.6;}
+.bkOptionDiv .bkOptionPosA {position: absolute; right:15px; top:17px; margin:0; background:#fff;padding:5px 15px; border:1px solid #379BFF;}
+.bkForm {margin-left: 15px;margin-top: 15px;}
+.bkForm input[type='text'] {width: 240px;height: 26px;line-height: 26px;padding:0 5px;color:#666;border:1px solid #379BFF;}
+.bkForm input[type='submit'] {width: 50px;height: 28px;background: #379BFF;text-align: center;color:#fff;}
+
+.bkTabCB {width: 918px;padding:10px 0;border:1px solid #379BFF;margin-top: 20px;border-radius: 3px;}
+.bkTabCBT {padding:0 15px 10px 15px;border-bottom:1px solid #379BFF;}
+.bkTabCBT p {line-height: 2;}
+.bkTabCBB {width: 840px; margin:20px auto;}
+.bkTabPhoto {float: left;}
+.bkTabPhoto img {width: 62px;height: 62px;padding:2px; border:1px solid #e0e0e0; border-radius: 3px;}
+.bkQuestionBox {float: right;width: 740px;border:1px solid #379BFF;}
+.bkQBt {height: 30px;padding:8px 15px; background: #379BFF;}
+.bkQBt a {font-size: 14px; color:#fff;}
+.bkQBt a:first-child i {display: inline-block;width: 30px;height: 30px;background: url(../images/uicon21.png) no-repeat;margin-right: 5px;vertical-align: middle;}
+.bkQBt a:last-child {margin-left: 20px; padding-left: 20px;border-left: 1px solid #fff;}
+.bkQBt a:last-child i {display: inline-block;width: 30px;height: 30px;background: url(../images/uicon22.png) no-repeat 1px 1px;margin-right: 5px;vertical-align: middle;}
+.bkQBc {padding:10px;}
+.bkQBc textarea {min-width: 710px; min-height:210px; padding:5px;line-height: 1.6;}
+.bkQBb {height: 20px;line-height: 20px;padding: 10px 15px;background: #379BFF; color:#fff;font-size: 14px;}
+.bkQBb input:last-child {margin-left: 20px;}
+.bkQBbBtn {display: inline-block;width: 150px;height: 35px;line-height: 35px;text-align: center;background: #FF7E27;color: #fff;font-size: 14px;border-radius: 3px; margin-top: 15px;}
+.bkQBbBtn:hover {opacity:.8; filter:alpha(opacity=80);}
 
 
 
