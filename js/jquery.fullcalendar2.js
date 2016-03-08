@@ -888,6 +888,8 @@
 		for (var i = 0; i < weeks.length; i++) {
 			var week = weeks[i];
 			var tr = $('<tr></tr>').appendTo(t.find('tbody'));
+			//mark a_bing添加
+			var aArr = ['06:00','09:00','12:00','14:00','17:00','20:00'];
 			for (var j = 0; j < week.length; j++) {
 				var day = week[j];
 				var dayHtml = '<span>' + day[2];
@@ -939,9 +941,10 @@
 						}, 500);
 				});*/
 			}
+			tr.prepend('<td>'+aArr[i]+'</td>');
 		}
 		//a_bing添加 底部 加班、请假、出勤
-		var trstr = '<tr id="orderTjtr"><td colspan="2">加班：<b>22</b>天</td><td colspan="2">请假：<b>1</b>天</td><td colspan="3">实际出勤：<b>21</b>天</td></tr>';
+		var trstr = '<tr id="orderTjtr"><td colspan="2">计划人员：王立群</td><td colspan="2">审核人员：王立群</td><td colspan="2">客户确认：王立群</td><td colspan="2">服务阿姨：王立群</td></tr>';
 		$(trstr).appendTo(t.find('tbody'));
 	 t.find('td[abbr^="' + opts.year + '-' + opts.month + '"]').removeClass('calendar-other-month');
 	
